@@ -1,0 +1,11 @@
+one:
+  package_id: 1
+  nome: MyString
+  descricao: MyString
+  valor: 9.99
+
+two:
+  package_id: 1
+  nome: MyString
+  descricao: MyString
+  valor: 9.99

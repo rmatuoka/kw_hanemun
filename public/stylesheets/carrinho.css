@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Tabelaviagem
+{
+	margin:10px auto;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#666;
+	text-align:center;
+	border-collapse:collapse;
+	background-color:#CCC;	
+}
+#Tabelaviagem .celgray
+{
+	background-color:#cecece;
+}
+#Tabelaviagem .celwhitegray
+{
+	background-color:#e5e5e5;
+	
+}
+#Tabelaviagem .celwhite
+{
+	background-color:#fff;
+	
+}
+#Tabelaviagem .tittabela1
+{
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:14px;
+	color:#8e005c;
+	
+}
+#Tabelaviagem .tittabela2
+{
+	background-color:#fff;
+	
+}
+#Tabbottom
+{
+	height:400px;
+	text-align:right;
+	display:block;
+	margin:auto;
+	
+}
+#Content #Boxcenter #Bottomtabela
+{
+	text-align:center;
+	width:auto;
+	height:450px;
+	background-color:#fffce7;	
+}

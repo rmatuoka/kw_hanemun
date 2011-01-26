@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  data_cerimonia: 2011-01-21 13:08:29
+  local_cerimonia: MyString
+  data_festa: 2011-01-21 13:08:29
+  local_festa: MyString
+
+two:
+  data_cerimonia: 2011-01-21 13:08:29
+  local_cerimonia: MyString
+  data_festa: 2011-01-21 13:08:29
+  local_festa: MyString

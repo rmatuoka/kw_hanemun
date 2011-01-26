@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Hanemon</title>
+<%=stylesheet_link_tag "estilo"%>
+<%=yield :head%>
+</head>
+<body>
+<div id="General">
+	<div id="Header">
+		<p style="font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#960062; text-align:right; margin:20px 0 0 20px;">
+		<%if current_user %>
+			<%=link_to "Editar Pacotes", packages_path%> | 
+ 			<%=link_to image_tag("icons/editar.png") + "Editar Profile", edit_user_path(:current)%> |
+			<%=link_to "Logout", logout_path%>
+		<%else%>
+			<%=link_to "Login", login_path%>
+		<%end%>
+		</p>
+	</div>
+    <div id="Content">
+    	<div id="Boxleft">
+        	<div id="Photo"><%=link_to image_tag(@user.avatar.url("home")), root_path%></div>
+			<h1 class="Titulo2">Faltam</h1>
+			<div id="Boxfaltamdias"><h1 class="Titulo">180</h1></div>
+          
+			<!-- INICIO BOX RIGHT -->
+          	<%=render :file => "/layouts/_cerimonia.html.erb"%>
+
+			<%=render :file => "/layouts/_festa.html.erb"%>
+            
+           	<%=render :file => "/layouts/_hotel.html.erb"%>
+			
+			<%=render :file => "/layouts/_salao.html.erb"%>
+		</div>
+		
+              <%=yield%>
+          	
+			<div id="Boxright">
+            
+				<%@packages_box.each do |p|%>
+			<div id="Boxviagem">
+				<h1 class="Titulo"><%=p.nome%></h1>
+			</div>	
+	        <div>
+	    		<%
+				counter = 1
+				p.quotes.all.each do |q|
+				%>
+					<div class="Boxpacotes">
+						<h1 class="Titulo4">Cota <%=counter%></h1>
+						<h1 class="Titulo5">R$ <%=q.valor%></h1>
+					</div>
+	                <%
+					counter = counter + 1
+					end
+					%>
+					<br>
+				<%end%>
+			</div>
+				<img src="images/img_meucarrinho.png" width="153" height="39" style="display:block; text-align:center; margin:auto; padding:30px 0 0 0;" />
+                <div class="Boxmeucarrinho">
+					<h1 class="Titulo6">Pacote2</h1>
+					<h1 class="Titulo5">R$300,00</h1>
+				</div>
+                <div id="Boxnaohaitems">
+					<h1 class="Titulo5" style="margin:5px 0 0 18px;">Não há items</h1>
+				</div>
+            </div>
+  </div>
+    <div id="Footer"></div>
+</div>
+</body>
+</html>

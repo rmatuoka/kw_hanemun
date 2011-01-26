@@ -1,0 +1,9 @@
+one:
+  from: MyString
+  mensagem: MyText
+  user_id: 1
+
+two:
+  from: MyString
+  mensagem: MyText
+  user_id: 1

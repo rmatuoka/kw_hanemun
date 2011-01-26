@@ -1,0 +1,59 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Content #Boxcenter #Boxfoto
+{
+	font:Verdana, Geneva, sans-serif;
+	color:#000;
+	font-weight:bold;
+	text-align:left;
+	width:568px;
+	padding:10px 10px 10px 10px;
+	height:107px;
+	background-color:#ffffff;
+	background-repeat:no-repeat;
+	background-position:top center;
+	display:block;
+	margin:0 0 30px 0;
+}
+#Content #Boxcenter #Midboxvideo
+{
+	width:auto;
+	height:150px;
+	margin:auto;	
+}
+#Content #Boxcenter #Bottomboxvideos 
+{
+	padding:0;
+	width:auto;
+	height:auto;
+	margin:auto;
+	background-color:#fffce7;	
+}
+	#Content #Boxcenter #Bottomboxfotos #Boxlistafotos
+	{
+			
+	}
+p
+{
+	font:Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#858585;
+}
+.Titulovideos
+{
+	background-image:url(../images/tit_backvideos.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	font:Verdana, Geneva, sans-serif;
+	padding:4px 0 0 5px;
+	width:auto;
+	height:20px;
+	color:#858585;
+	text-align:left;
+	margin:auto;	
+}
+#Boxlistafotos
+{
+	
+}

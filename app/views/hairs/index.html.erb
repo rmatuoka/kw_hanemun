@@ -1,0 +1,23 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "lista_saloes"%>
+<%end%>
+
+<div id="Boxcenter">
+           <%=render :file => "/layouts/_top.html.erb"%>
+           <div id="Vazia"></div>
+            <div id="Bottomboxc">
+            	<h1 class="Titlista">
+				LISTA DE SALÕES 
+				<%=link_to "+ adicionar novo", new_hair_path%></h1>
+                <%@hairs.each do |h|%>
+				<div id="Boxlista">
+                    <p>
+						<%if current_user%>
+							<%=link_to "Excluir", h, :confirm => 'Confirme a exclusão do hotel.', :method => :delete%> | 
+						<%end%>
+						<b><%=h.nome%></b> | Tel: <%=h.telefone%> | Site: <%=link_to h.site, h.site, :target => "_blank"%> 
+					</p>
+                </div>
+				<%end%>
+            </div>
+        </div>

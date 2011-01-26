@@ -1,0 +1,9 @@
+one:
+  from: 
+  message: MyText
+  user_id: 1
+
+two:
+  from: 
+  message: MyText
+  user_id: 1

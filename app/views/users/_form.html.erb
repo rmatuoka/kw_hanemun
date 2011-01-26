@@ -1,0 +1,39 @@
+<% form_for (@user, :html => { :multipart => :true }) do |f| %>
+  <%= f.error_messages %>
+  	<h1>Dados de Acesso</h1>
+	<p>
+		<%= f.label :username %><br />
+		<%= f.text_field :username %>
+	</p>
+	<p>
+		<%= f.label :email %><br />
+		<%= f.text_field :email %>
+	</p>
+	<p>
+		<%= f.label :password %><br />
+		<%= f.password_field :password %>
+	</p>
+	<p>
+		<%= f.label :password_confirmation %><br />
+		<%= f.password_field :password_confirmation %>
+	</p>
+	
+	<h1>Sobre o casal</h1>	
+	<p>
+	    <%= f.label :foto_do_casal %><br />
+	    <%= f.file_field :avatar %>
+	  </p>
+	<p>
+	    <%= f.label :nome_noivo %><br />
+	    <%= f.text_field :nome_noivo %>
+	  </p>
+	<p>
+	    <%= f.label :nome_noiva %><br />
+	    <%= f.text_field :nome_noiva %>
+	 </p>
+	<p>
+	    <%= f.label :historia_do_casal %><br />
+	    <%= f.text_area :historia, :class => "mceEditor" %>
+	 </p>
+  <p><%= f.submit %></p>
+<% end %>

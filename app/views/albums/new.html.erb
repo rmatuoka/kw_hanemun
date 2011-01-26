@@ -1,0 +1,29 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "foto"%>
+<%end%>
+
+<div id="Boxcenter">
+            <%=render :file => "/layouts/_top.html.erb"%>
+            <div id="Midboxfoto">
+        <img src="/images/tit_fotos.png" width="112" height="59"  style="margin:20px 0 10px 30px; float:left;"/>
+        </div>
+            <div id="Bottomboxfotos">
+            
+            <div id="Boxlistafotos">
+                
+                <% form_for @album do |f| %>
+				  	<h1>Novo Album</h1>
+					<p>
+						<%= f.label :titulo %><br />
+						<%= f.text_field :titulo %>
+					</p>
+					<p>
+						<%= f.label :descricao %><br />
+						<%= f.text_area :descricao %>
+					</p>
+
+				  <p><%= f.submit %></p>
+				<% end %>
+            </div>
+            </div>
+        </div>

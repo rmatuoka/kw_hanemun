@@ -1,0 +1,27 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "lista_hoteis"%>
+<%end%>
+
+<div id="Boxcenter">
+           <%=render :file => "/layouts/_top.html.erb"%>
+           <div id="Vazia"></div>
+            <div id="Bottomboxc">
+            	<h1 class="Titlista">
+				MINHAS COTAS 
+				<%=link_to "+ adicionar novo", new_package_quote_path%></h1>
+                <%@quotes.each do |p|%>
+				<div id="Boxlista">
+                    <p>
+						<%if current_user%>
+							<%=link_to "Excluir", p, :confirm => 'Confirme a exclusão da cota.', :method => :delete%> | 
+						<%end%>
+						<b><%=p.nome%></b>
+						
+						<%if current_user%>
+							<%= link_to "Editar", edit_package_quote_path(@package, p) %>
+						<%end%> 
+					</p>
+                </div>
+				<%end%>
+            </div>
+        </div>

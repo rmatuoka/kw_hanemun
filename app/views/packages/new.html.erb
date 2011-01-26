@@ -1,0 +1,16 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "lista_hoteis"%>
+<%end%>
+
+<div id="Boxcenter">
+           <%=render :file => "/layouts/_top.html.erb"%>
+           <div id="Vazia"></div>
+            <div id="Bottomboxc">
+            	<h1 class="Titlista">
+				MEUS PACOTES 
+				<%=link_to "+ adicionar novo", new_package_path%></h1>
+
+                <%= render :partial => 'form' %>
+            </div>
+        </div>
+

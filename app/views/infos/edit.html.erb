@@ -1,0 +1,34 @@
+<%content_for :head do%>
+	
+<%end%>
+
+<div id="Boxcenter">
+            <%=render :file => "/layouts/_top.html.erb"%>
+           <div id="Vazia"></div>
+            <div id="Bottomboxc">
+            	<% form_for @info do |f| %>
+				  <%= f.error_messages %>
+				<h2>Dados da Cerimônia</h2>  
+				<p>
+				    <%= f.label :data_cerimonia %><br />
+				    <%= f.datetime_select :data_cerimonia %>
+				  </p>
+				  <p>
+				    <%= f.label :local_cerimonia %><br />
+				    <%= f.text_field :local_cerimonia %>
+				  </p>
+					<h2>Dados da Festa</h2>
+				  <p>
+				    <%= f.label :data_festa %><br />
+				    <%= f.datetime_select :data_festa %>
+				  </p>
+				  <p>
+				    <%= f.label :local_festa %><br />
+				    <%= f.text_field :local_festa %>
+				  </p>
+				  <p><%= f.submit %></p>
+				<% end %>
+				
+                
+            </div>
+        </div>

@@ -1,0 +1,45 @@
+<%content_for :head do%>
+<%= javascript_include_tag "jquery/jquery" %>
+<%= javascript_include_tag "jquery/jquery.tools.min.js" %>
+	<script>
+	function carrega_foto(id_foto)
+	{
+		$.ajax({
+			type:     "GET",
+			dataType: "html",
+			url:      "/fotos/ajax",
+			data:     "id_foto="+ id_foto,
+			success: function(msg){
+				$("#Boxlistafotos").html(msg);
+			}
+		});
+	}
+	</script>
+<%end%>
+<div id="Boxcenter">
+    <%=render :file => "/layouts/_top.html.erb"%>
+    <div id="Midboxfoto">
+		<p style="text-align:left;">
+			<%=link_to "<img src='/images/tit_fotos.png'  style='margin:20px 0 10px 30px;'/>", albums_path%>
+		</p>
+	</div>
+  
+	<%if !@fotos.blank?%>
+	<div id="Bottomboxfotos">
+    	<h1 class="Titulofotos"><%=@album.titulo%>: <%=@total_de_fotos%></h1>
+    	<div id="Boxlistafotos">
+ 	 		
+    	</div>
+    
+    	<%@fotos.each do |f|%>
+			<a href="javascript:void(0);" onclick="carrega_foto(<%=f.id%>)"><%=image_tag(f.image.url("thumb"))%></a>
+		<%end%>
+	
+	</div>
+	<%end%>
+	
+	<%if current_user%>
+		<%=link_to image_tag("icons/adicionar.png") + "adicionar foto", new_album_foto_path(@album)%>
+	<%end%>
+</div>
+

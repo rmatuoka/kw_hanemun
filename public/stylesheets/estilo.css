@@ -1,0 +1,395 @@
+*
+{
+	margin:0px;
+	padding:0px;
+}
+a, p, td, input, textarea, span, div ,h1
+{
+	font:Arial, Helvetica, sans-serif;
+	color:#5c5c5c;
+	font-style:normal;
+	font-size:12px;
+}
+img
+{
+	border:none;	
+}
+li
+{list-style:none;
+}
+p
+{
+	text-align:justify;
+}
+
+a
+{
+	text-decoration:none;	
+}
+
+a:hover
+{
+	text-decoration:underline;	
+}
+body
+{
+	background-image:url(../images/background.jpg);
+	background-repeat:repeat-x;
+	background-position:top center;
+	background-color:#fffce7;
+}
+#General
+{
+	margin:auto;
+	padding:0;
+	width:950px;
+	margin:auto;
+	
+}
+#Header
+{
+	padding:auto;
+	width:auto;
+	height:19px;
+}
+#Content
+{
+	text-align:center;
+	padding:o;
+	margin:auto;
+}
+#Content .Titulo
+{
+	font:Arial, Helvetica, sans-serif;
+	color:#5c5c5c;
+	font-size:15px; 
+	font-weight:bold;
+	color:#FFF !important;
+}
+#Content .Titulo2
+{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#960062;
+}
+.Titulo3
+{
+	text-align:center;
+	vertical-align:middle;
+	background-color:#fffce7;	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:22px;
+	color:#F96;
+}
+.Titulo4
+{
+	display:inline-block;
+	background-color:transparent;
+	text-align:left;
+	margin:0px 10px 0 -37px;	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	color:#FFF;
+	
+}
+.Titulo5
+{
+	display:inline-block;
+	background-color:transparent;
+	text-align:none;
+	margin:0px 0 0px 0px;	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+}
+.Titulo6
+{
+	display:inline-block;
+	background-color:transparent;
+	text-align:left;
+	margin:0px 10px 0 -37px;	
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:10px;
+	color:#000;
+	
+}
+						
+	#Content #Boxleft
+	{
+		display:inherit;
+		float:left;
+		width:170px;
+		height:760px;
+		text-align:center;
+		margin:auto;
+		background-image:url(../images/img_back_boxleftright.png);
+		background-repeat:repeat-x;
+	}
+								
+			#Content #Boxleft h1
+			{
+					font-family:Arial, Helvetica, sans-serif;
+						font-size:12px;
+						font-weight:normal;
+			}
+	
+		#Content #Boxleft #Photo
+		{
+			background-color:#eae8db;
+			display:inline-block;
+			float:left;
+			width:157px;
+			height:224px;
+			text-align:center;
+			float:none;
+			margin:0px auto;
+			padding:15px 0 0px 0;
+		}	
+			#Content #Boxleft #Boxfaltamdias
+			{
+				font:Arial, Helvetica, sans-serif;
+				color:#5c5c5c;
+				font-weight:bold;
+				text-align:center;
+				background-image:url(../images/img_backfaltamdias.png);
+				background-repeat:no-repeat;
+				background-position:center top;
+				display:inline-block;
+				float:left;
+				padding:20px 10px 10px 10px;
+				width:137px;
+				height:9px;
+				text-align:center;
+				float:none;
+			}
+				#Content #Boxleft #Boxcerimonia
+				{
+					background-image:url(../images/img_back_cerimonia.png);
+					background-repeat:no-repeat;
+					background-position:center top;
+					width:151px;
+					height:61px;
+					padding:35px 0 0 10px;
+					margin:20px auto;
+					text-align:left;
+					
+				}
+				#Content #Boxleft #Boxfesta
+				{
+					background-image:url(../images/img_back_festa.png);
+					background-repeat:no-repeat;
+					background-position:center top;
+					width:151px;
+					height:61px;
+					padding:35px 0 0 10px;
+					margin:20px auto;
+					text-align:left;
+					
+				}
+					#Content #Boxleft #Boxhotel
+					{
+						background-image:url(../images/img_back_hotel.png);
+						background-repeat:no-repeat;
+						background-position:center top;
+						width:151px;
+						height:47px;
+						padding:28px 0 0 15px;
+						margin:20px auto;
+						text-align:left;
+					}
+							#Content #Boxleft #Boxsalao
+							{
+								background-image:url(../images/img_back_salao.png);
+								background-repeat:no-repeat;
+								background-position:center top;
+								width:151px;
+								height:47px;
+								padding:28px 0 0 15px;
+								margin:20px auto;
+								text-align:left;
+							}
+					
+		#Content #Boxright
+		{
+			margin:0px;
+			width:170px;
+			height:760px;
+			float:right;
+			background-image:url(../images/img_back_boxleftright.png);
+			background-repeat:repeat-x;
+		}
+			#Content #Boxright #Boxviagem
+			{
+				background-image:url(../images/img_viagempara.png);
+				background-repeat:no-repeat;
+				background-position:center top;
+				padding:10px 0px 0px 0px;
+				width:170px;
+				height:auto;
+				min-height:30px;
+				text-align:center;	
+			}
+				#Content #Boxright .Boxpacotes
+				{
+					background-image:url(../images/img_backpacotes.png);
+					background-repeat:no-repeat;
+					background-position:center bottom;
+					background-color:#ffedd2;
+					padding:16px 0 0 0;
+					margin:auto;
+					width:170px;
+					height:auto;
+					min-height:19px;	
+				}
+					#Content #Boxright .Boxmeucarrinho
+					{
+						background-image:url(../images/img_backmeucarrinho.png);
+						background-repeat:no-repeat;
+						background-position:center bottom;
+						background-color:#ffedd2;
+						padding:16px 0 0 0;
+						margin:auto;
+						width:170px;
+						height:19px;	
+					}
+						#Content #Boxright #Boxcarrinho
+						{
+							background-image:url(../images/img_viagempara.png);
+							background-repeat:no-repeat;
+							background-position:center top;
+							background-color:#fffce7;
+							padding:10px 0px 0px 0px;
+							margin:auto;
+							width:170px;
+							height:77px;
+							text-align:center;	
+						}
+								#Content #Boxright #Boxnaohaitems
+								{
+									background-image:url(../images/img_naohaitems.png);
+									background-repeat:no-repeat;
+									background-position:center bottom;
+									background-color:#ffedd2;
+									margin:auto;
+									padding:15px 0 0 0;
+									width:170px;
+									height:20px;
+									text-align:left;	
+								}
+		#Content #Boxcenter
+		{
+			display:inline-block;
+			width:588px;
+			height:auto;
+			margin:auto;
+			float:none;		
+		}
+							
+					#Content #Boxcenter #Topboxc
+					{
+						width:588px;
+						min-height:86px;
+						height:auto;
+						margin:auto;
+						text-align:center;
+						background-color:#fffce7;
+						vertical-align:middle;
+						z-index:-12;
+					}
+							#Content #Boxcenter #Midboxc
+							{
+								width:auto;
+								min-height:395px;
+								height:auto;
+								margin:auto;	
+							}
+							
+								#Content #Boxcenter #Midboxc input
+								{
+									width:300px;
+									height:25px;
+									margin:auto;
+								}
+										#Content #Boxcenter #Midboxc p
+										{
+											font:Arial, Helvetica, sans-serif;
+											color:#5c5c5c;
+											font-size:12px;
+											font-weight:bold;
+										}
+										
+										#Content #Boxcenter #Midboxc #SobreNos
+										{
+											font:Arial, Helvetica, sans-serif;
+											color:#5c5c5c;
+											font-weight:bold;
+											text-align:left;
+											width:540x;
+											padding:8px 0 0 40px;
+											height:30px;
+											background-image:url(../images/img_back_ultimasat.png);
+											background-repeat:no-repeat;
+											background-position:top center;
+											margin:20px 0 0 0;
+											text-align:left;
+										}
+						#Content #Boxcenter #Bottomboxc
+						{
+							width:auto;
+							height:auto;
+							min-height:20px;
+							margin:auto;
+							background-color:#fff;	
+						}
+								#Content #Boxcenter #Bottomboxc #Ultimasat
+								{
+									font:Arial, Helvetica, sans-serif;
+									color:#5c5c5c;
+									font-weight:bold;
+									text-align:left;
+									width:540x;
+									padding:8px 0 0 30px;
+									height:30px;
+									background-image:url(../images/img_back_ultimasat.png);
+									background-repeat:no-repeat;
+									background-position:top center;
+									margin:-10px 0 0 0;
+									text-align:center;
+								}
+									#Content #Boxcenter #Bottomboxc #BoxAtualiza
+									{
+										font:Arial, Helvetica, sans-serif;
+										color:#5c5c5c;
+										font-weight:bold;
+										text-align:left;
+										width:568px;
+										padding:10px 10px 10px 10px;
+										height:120px;
+										background-image:url(../images/img_back_atualizacao.png);
+										background-repeat:repeat-x;
+										display:block;
+										margin:0;
+									}
+										#Content #Boxcenter #Bottomboxc #BoxAtualiza h1
+										{
+											font:Arial, Helvetica, sans-serif;
+											color:#5c5c5c;
+											font-weight:bold;
+											text-align:justify;
+										}
+										#Content #Boxcenter #Bottomboxc #BoxAtualiza p
+										{
+											font:Arial, Helvetica, sans-serif;
+											color:#5c5c5c;
+											font-weight:normal;
+											text-align:justify;
+										}
+							
+#Footer
+{
+	background-image:url(../images/img_back_foot.png);
+	background-repeat:no-repeat;
+	background-position:center top;
+	margin:20px auto;
+	width:596px;
+	height:77px;
+}

@@ -1,0 +1,37 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "foto"%>
+<%end%>
+
+<div id="Boxcenter">
+            <%=render :file => "/layouts/_top.html.erb"%>
+            <div id="Midboxfoto">
+        	</div>
+            <div id="Bottomboxfotos">
+            <h1 class="Titulofotos">Nossos momentos: <%=@total_de_albums%></h1>
+            <div id="Boxlistafotos">
+                <%@albums.each do |a|%>
+				<div id="Boxfoto">
+					<h1 class="Titulo2">
+						<%if current_user%>
+							<%=link_to image_tag("icons/excluir.png"), a, :confirm => 'Confirme a exclusão do album.', :method => :delete%> | 
+						<%end%>
+						<%=link_to a.titulo, album_path(a)%>
+					</h1>
+                    <img src="images/img_linha.png" width="540" height="1" />
+                    <h1 class="Titulo2">
+                    <img src="images/img_fotoexemplo.jpg" width="88" height="89" style="float:left; margin:5px 5px 5px 5px; "  />
+                    </h1>
+                    <p>
+						<%=a.descricao%>
+                    </p>
+					
+                </div>
+				<%end%>
+                <div>
+				<%if current_user%>
+					<%=link_to image_tag("icons/adicionar.png") + "adicionar novo album", new_album_path%>
+				<%end%>
+				</div>
+            </div>
+            </div>
+        </div>

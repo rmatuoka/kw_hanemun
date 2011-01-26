@@ -1,0 +1,10 @@
+<div id="Boxfesta">
+	<ul>
+		<li>Data: <%=@info.data_festa.to_date.strftime("%d/%m/%Y")%></li>
+	    <li>Horário: <%=@info.data_festa.to_time.strftime("%H:%M:%S")%></li>
+	    <li>Local: <%=@info.local_festa%></li>
+		<%if current_user%>
+			<%=link_to image_tag("icons/editar.png") + "editar", edit_info_path(@info)%>
+		<%end%>
+	</ul>
+</div>

@@ -1,0 +1,27 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "lista_saloes"%>
+<%end%>
+
+<div id="Boxcenter">
+           <%=render :file => "/layouts/_top.html.erb"%>
+           <div id="Vazia"></div>
+            <div id="Bottomboxc">
+            	<% form_for @hair do |f| %>
+				  <%= f.error_messages %>
+				  <p>
+				    <%= f.label :nome %><br />
+				    <%= f.text_field :nome %>
+				  </p>
+				  <p>
+				    <%= f.label :telefone %><br />
+				    <%= f.text_field :telefone %>
+				  </p>
+				  <p>
+				    <%= f.label :site %><br />
+				    <%= f.text_field :site %>
+				  </p>
+				  <p><%= f.submit %></p>
+				<% end %>
+                
+            </div>
+        </div>

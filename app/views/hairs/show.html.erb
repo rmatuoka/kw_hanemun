@@ -1,0 +1,20 @@
+<% title "Hair" %>
+
+<p>
+  <strong>Nome:</strong>
+  <%=h @hair.nome %>
+</p>
+<p>
+  <strong>Telefone:</strong>
+  <%=h @hair.telefone %>
+</p>
+<p>
+  <strong>Site:</strong>
+  <%=h @hair.site %>
+</p>
+
+<p>
+  <%= link_to "Edit", edit_hair_path(@hair) %> |
+  <%= link_to "Destroy", @hair, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", hairs_path %>
+</p>
