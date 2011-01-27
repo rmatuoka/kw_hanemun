@@ -32,9 +32,15 @@ class ApplicationController < ActionController::Base
         @user = current_user
         @info = @user.infos.first
       end
+      
+      load_carrinho
     end
     
     def load_box_package
       @packages_box = @user.packages.all
+    end
+    
+    def load_carrinho
+      @cart = Cart.all(:conditions => ['session_id = ?', request.session_options[:id]])
     end
 end

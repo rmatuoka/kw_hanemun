@@ -85,32 +85,30 @@ body
 {
 	display:inline-block;
 	background-color:transparent;
-	text-align:left;
-	margin:0px 10px 0 -37px;	
+	text-align:left;	
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:10px;
 	color:#FFF;
-	
+	width:50px;
 }
 .Titulo5
 {
 	display:inline-block;
 	background-color:transparent;
-	text-align:none;
-	margin:0px 0 0px 0px;	
+	text-align:none;	
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:10px;
+	padding-top:3px;
 }
 .Titulo6
 {
 	display:inline-block;
 	background-color:transparent;
-	text-align:left;
-	margin:0px 10px 0 -37px;	
+	text-align:left;	
 	font-family:Verdana, Geneva, sans-serif;
 	font-size:10px;
 	color:#000;
-	
+	width:50px;
 }
 						
 	#Content #Boxleft
@@ -233,12 +231,13 @@ body
 					background-image:url(../images/img_backpacotes.png);
 					background-repeat:no-repeat;
 					background-position:center bottom;
-					background-color:#ffedd2;
-					padding:16px 0 0 0;
-					margin:auto;
-					width:170px;
-					height:auto;
-					min-height:19px;	
+					/*background-color:#ffedd2;*/
+					width:155px;
+					height:22px;
+					padding:3px 0px 0px 15px;
+					min-height:19px;
+					text-align:left;
+					margin-bottom:7px;
 				}
 					#Content #Boxright .Boxmeucarrinho
 					{
@@ -246,21 +245,20 @@ body
 						background-repeat:no-repeat;
 						background-position:center bottom;
 						background-color:#ffedd2;
-						padding:16px 0 0 0;
-						margin:auto;
-						width:170px;
-						height:19px;	
+						width:155px;
+						height:22px;
+						padding:3px 0px 0px 15px;
+						min-height:19px;
+						text-align:left;
+						margin-bottom:7px;	
 					}
 						#Content #Boxright #Boxcarrinho
 						{
 							background-image:url(../images/img_viagempara.png);
 							background-repeat:no-repeat;
-							background-position:center top;
 							background-color:#fffce7;
-							padding:10px 0px 0px 0px;
-							margin:auto;
-							width:170px;
-							height:77px;
+							width:151px;
+							height:25px;
 							text-align:center;	
 						}
 								#Content #Boxright #Boxnaohaitems
@@ -393,3 +391,12 @@ body
 	width:596px;
 	height:77px;
 }
+
+.botao_carrinho_pacote
+{
+	margin-right:10px;
+	float:right; 
+	width:20px; 
+	height:20px; 
+}
+

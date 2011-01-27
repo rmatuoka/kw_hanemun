@@ -1,8 +1,11 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "carrinho"%>
+<%end%>
  <div id="Boxcenter">
-            <div id="Topboxc"><h1 class="Titulo3">Vanessa<img src="images/img_nomes.png" width="75" height="59" align="middle"  />Fabiano</h1></div>
-        <div id="Midboxfoto">
-      <img src="images/img_fotosevideos.png" width="325" height="59" />
-      </div>    
+		<%=render :file => "/layouts/_top.html.erb"%>
+		<div id="Midboxfoto">
+        	<img src="/images/tit_fotos.png" width="112" height="59"  style="margin:20px 0 10px 30px; float:left;"/>
+       </div>    
       <img src="images/tit_meucarrinho.png" width="541" height="43"/>   
 <div id="Bottomboxfotos">
 

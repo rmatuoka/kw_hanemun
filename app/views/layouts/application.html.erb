@@ -4,7 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Hanemon</title>
 <%=stylesheet_link_tag "estilo"%>
+<%= javascript_include_tag "jquery/jquery" %>
+<%= javascript_include_tag "jquery/jquery.tools.min.js" %>
+<%=javascript_include_tag "funcoes"%>
+
 <%=yield :head%>
+
 </head>
 <body>
 <div id="General">
@@ -35,39 +40,9 @@
 			<%=render :file => "/layouts/_salao.html.erb"%>
 		</div>
 		
-              <%=yield%>
+            <%=yield%>
           	
-			<div id="Boxright">
-            
-				<%@packages_box.each do |p|%>
-			<div id="Boxviagem">
-				<h1 class="Titulo"><%=p.nome%></h1>
-			</div>	
-	        <div>
-	    		<%
-				counter = 1
-				p.quotes.all.each do |q|
-				%>
-					<div class="Boxpacotes">
-						<h1 class="Titulo4">Cota <%=counter%></h1>
-						<h1 class="Titulo5">R$ <%=q.valor%></h1>
-					</div>
-	                <%
-					counter = counter + 1
-					end
-					%>
-					<br>
-				<%end%>
-			</div>
-				<img src="images/img_meucarrinho.png" width="153" height="39" style="display:block; text-align:center; margin:auto; padding:30px 0 0 0;" />
-                <div class="Boxmeucarrinho">
-					<h1 class="Titulo6">Pacote2</h1>
-					<h1 class="Titulo5">R$300,00</h1>
-				</div>
-                <div id="Boxnaohaitems">
-					<h1 class="Titulo5" style="margin:5px 0 0 18px;">Não há items</h1>
-				</div>
-            </div>
+			<%=render :file => "/layouts/_cotas.html.erb"%>
   </div>
     <div id="Footer"></div>
 </div>

@@ -8,18 +8,18 @@
             <div id="Bottomboxc">
             	<h1 class="Titlista">
 				MEUS PACOTES 
-				<%=link_to "+ adicionar novo", new_package_path%></h1>
+				<%=link_to image_tag("icons/adicionar.png") + " adicionar novo", new_package_path%></h1>
                 <%@packages.each do |p|%>
 				<div id="Boxlista">
                     <p>
 						<%if current_user%>
-							<%=link_to "Excluir", p, :confirm => 'Confirme a exclusão do pacote.', :method => :delete%> | 
+							<%=link_to image_tag("icons/excluir.png"), p, :confirm => 'Confirme a exclusão do pacote.', :method => :delete%> 
 						<%end%>
 						<b><%=p.nome%></b>
 						
 						<%if current_user%>
-							<%= link_to "Editar", edit_package_path(p) %>
-							<%= link_to "Gerenciar Cotas", package_quotes_path(p) %>
+							<%= link_to image_tag("icons/editar.png") + "editar", edit_package_path(p) %> | 
+							<%= link_to image_tag("icons/editar.png") + "gerenciar cotas", package_quotes_path(p) %>
 						<%end%> 
 					</p>
                 </div>
