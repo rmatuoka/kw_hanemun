@@ -24,6 +24,7 @@ class ApplicationController < ActionController::Base
     
     def autentica
       if !current_user
+        #@user = User.find_by_user
         @user = User.find(1)
         @info = @user.infos.first
         #redirect_to login_path

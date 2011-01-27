@@ -11,4 +11,8 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, :styles => { :home => "140x209>"},
         :url => "/uploads/:attachment/:id/:basename_:style.:extension",
         :path => ":rails_root/public/uploads/:attachment/:id/:basename_:style.:extension"
+        
+    #def find_by_user
+    #  return User.first(:conditions => ['username = ?', param[:user]])
+    #end
 end

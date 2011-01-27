@@ -23,6 +23,5 @@ ActionController::Routing::Routes.draw do |map|
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   
   map.root :controller => "home"
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  map.connect ":user", :controller => "home", :action => "index"
 end
