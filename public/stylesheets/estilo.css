@@ -400,3 +400,14 @@ body
 	height:20px; 
 }
 
+.hide
+{
+	display:none; 
+	cursor:pointer;"
+}
+
+.show
+{
+	display:block; 
+	cursor:pointer;"
+}

@@ -1,10 +1,10 @@
 <div id="Boxright">
 
 	<%@packages_box.each do |p|%>
-<div id="Boxviagem">
+<div id="Boxviagem" style="cursor:pointer;" onclick="mostra_cota(<%=p.id%>)">
 	<h1 class="Titulo"><%=p.nome%></h1>
 </div>	
-<div>
+<div id="Cotas<%=p.id%>" class="hide">
 	<%
 	counter = 1
 	p.quotes.all.each do |q|
@@ -19,8 +19,9 @@
 		end
 		%>
 		<br>
-	<%end%>
 </div>
+	<%end%>
+
 	<img src="/images/img_meucarrinho.png" width="153" height="39" style="display:block; text-align:center; margin:auto; padding:30px 0 0 0;" />
 
 	<div id="ajaxCarrinho">

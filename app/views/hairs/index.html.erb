@@ -8,8 +8,10 @@
             <div id="Bottomboxc">
             	<h1 class="Titlista">
 				LISTA DE SALÕES 
-				<%=link_to "+ adicionar novo", new_hair_path%></h1>
-                <%@hairs.each do |h|%>
+				<%if current_user%>
+					<%=link_to "+ adicionar novo", new_hair_path%></h1>
+                <%=end%>
+				<%@hairs.each do |h|%>
 				<div id="Boxlista">
                     <p>
 						<%if current_user%>

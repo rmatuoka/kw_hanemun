@@ -29,3 +29,19 @@ function remove_carrinho(id)
 		}
 	});
 }
+
+function mostra_cota(x)
+{
+	if($("#Cotas" + x).hasClass('hide'))
+	{
+		//MOSTRA
+		$("#Cotas" + x).slideDown('slow');
+		$("#Cotas" + x).removeClass('hide')
+	}
+	else
+	{
+		//ESCONDE\
+		$("#Cotas" + x).slideUp('slow');
+		$("#Cotas" + x).addClass('hide')
+	}
+}
