@@ -136,7 +136,8 @@ body
 			display:inline-block;
 			float:left;
 			width:157px;
-			height:224px;
+			min-height:25px;
+			height:auto;
 			text-align:center;
 			float:none;
 			margin:0px auto;

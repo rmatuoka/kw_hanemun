@@ -10,7 +10,7 @@
 	p.quotes.all.each do |q|
 	%>
 		<div class="Boxpacotes">
-			<h1 class="Titulo4"><%=q.nome%></h1>
+			<h1 class="Titulo4"><%=truncate(q.nome, 10, "...")%></h1>
 			<h1 class="Titulo5">R$ <%=q.valor%></h1>
 			<%=link_to image_tag("trans.gif", :class =>"botao_carrinho_pacote"), "javascript:adiciona_carrinho(#{q.id});"%>
 		</div>
