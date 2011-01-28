@@ -3,6 +3,5 @@ class HomeController < ApplicationController
   
   def index
     @mensagens = @user.scrapbooks.all
-    
   end
 end

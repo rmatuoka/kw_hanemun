@@ -41,6 +41,6 @@ class ScrapbooksController < ApplicationController
     @scrapbook = Scrapbook.find(params[:id])
     @scrapbook.destroy
     flash[:notice] = "Successfully destroyed scrapbook."
-    redirect_to scrapbooks_url
+    redirect_to root_path
   end
 end
