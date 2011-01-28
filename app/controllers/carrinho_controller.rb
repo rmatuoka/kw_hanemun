@@ -30,7 +30,7 @@ class CarrinhoController < ApplicationController
   def remover
     if !params[:quote_id].blank?
       #verifica se existe o item no carrinho
-      carts = Cart.first(:conditions => ['session_id = ? AND quote_id = ? AND finzalido = 0', request.session_options[:id], params[:quote_id]] )
+      carts = Cart.first(:conditions => ['session_id = ? AND quote_id = ? AND finalizado = 0', request.session_options[:id], params[:quote_id]] )
       
       if carts
         carts.destroy
