@@ -395,6 +395,16 @@ body
 	height:77px;
 }
 
+#PopPacotes
+{
+	position:absolute;
+	border:1px solid #a50060;
+	background-color:#fd4db5;
+	padding:7px;
+	font-size:10px;
+	color:#fff;
+	font-family:Verdana	;
+}
 .botao_carrinho_pacote
 {
 	margin-right:10px;

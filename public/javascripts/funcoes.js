@@ -45,3 +45,30 @@ function mostra_cota(x)
 		$("#Cotas" + x).addClass('hide')
 	}
 }
+
+function show_descricao(descricao)
+{
+	$("#PopPacotes").html(descricao)
+	$('#PopPacotes').attr("style", "top:"+  +"px; left:"+  +";px");
+	$("#PopPacotes").fadeIn()
+}
+
+function hide_descricao()
+{
+	$("#PopPacotes").fadeOut()
+	$("#PopPacotes").hide()
+}
+
+jQuery(document).ready(function(){
+
+	$(".Titulo4").mouseover(function(e){
+		$("#PopPacotes").html($(this).attr("title"))
+		var top = e.pageY - 50
+		$('#PopPacotes').attr("style", "top:"+ top +"px; left:"+ e.pageX +"px;");
+	    $("#PopPacotes").fadeIn()
+	});
+	
+	$(".Titulo4").mouseout(function(e){
+	    $("#PopPacotes").fadeOut()
+	});
+})

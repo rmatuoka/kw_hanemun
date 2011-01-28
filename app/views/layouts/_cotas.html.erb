@@ -1,4 +1,5 @@
 <div id="Boxright">
+<div id="PopPacotes" style="display:none;"></div>
 
 	<%@packages_box.each do |p|%>
 <div id="Boxviagem" style="cursor:pointer;" onclick="mostra_cota(<%=p.id%>)">
@@ -10,7 +11,7 @@
 	p.quotes.all.each do |q|
 	%>
 		<div class="Boxpacotes">
-			<h1 class="Titulo4"><%=truncate(q.nome, 10, "...")%></h1>
+			<h1 class="Titulo4" style="cursor:help;" title="<%=q.descricao%>"><%=truncate(q.nome, 10, "...")%></h1>
 			<h1 class="Titulo5">R$ <%=q.valor%></h1>
 			<%=link_to image_tag("trans.gif", :class =>"botao_carrinho_pacote"), "javascript:adiciona_carrinho(#{q.id});"%>
 		</div>
@@ -24,6 +25,8 @@
 
 	<img src="/images/img_meucarrinho.png" width="153" height="39" style="display:block; text-align:center; margin:auto; padding:30px 0 0 0;" />
 
+	<!-- POPDESCRICAO -->
+	
 	<div id="ajaxCarrinho">
 		<%@cart.each do |c|%>
 		<%q = Quote.find(c.quote_id)%>
