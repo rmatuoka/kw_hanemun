@@ -1,0 +1,109 @@
+--- 
+"12": !map:HashWithIndifferentAccess 
+  tipo: CP
+  item_frete_1: "0"
+  ref_transacao: "12"
+  item_valor_1: "9900"
+  item_frete_2: "0"
+  commit: Efetuar pagamento!
+  moeda: BRL
+  item_quant_1: "1"
+  item_valor_2: "20000"
+  email_cobranca: fabiano@pprint.com.br
+  item_quant_2: "1"
+  item_peso_1: "0"
+  item_id_1: "1"
+  item_peso_2: "0"
+  item_id_2: "2"
+  item_descr_1: "Passeio rom\xE2ntico de barco"
+  item_descr_2: Passeio de moto
+"13": !map:HashWithIndifferentAccess 
+  tipo: CP
+  item_frete_1: "0"
+  ref_transacao: "13"
+  item_valor_1: "9900"
+  item_frete_2: "0"
+  commit: Efetuar pagamento!
+  moeda: BRL
+  item_quant_1: "1"
+  item_valor_2: "20000"
+  email_cobranca: fabiano@pprint.com.br
+  item_quant_2: "1"
+  item_peso_1: "0"
+  item_id_1: "1"
+  item_peso_2: "0"
+  item_id_2: "2"
+  item_descr_1: "Passeio rom\xE2ntico de barco"
+  item_descr_2: Passeio de moto
+"14": !map:HashWithIndifferentAccess 
+  tipo: CP
+  item_frete_1: "0"
+  ref_transacao: "14"
+  item_valor_1: "9900"
+  item_frete_2: "0"
+  commit: Efetuar pagamento!
+  moeda: BRL
+  item_quant_1: "1"
+  item_valor_2: "20000"
+  email_cobranca: fabiano@pprint.com.br
+  item_quant_2: "1"
+  item_peso_1: "0"
+  item_id_1: "1"
+  item_peso_2: "0"
+  item_id_2: "2"
+  item_descr_1: "Passeio rom\xE2ntico de barco"
+  item_descr_2: Passeio de moto
+"1": !map:HashWithIndifferentAccess 
+  tipo: CP
+  item_frete_1: "0"
+  ref_transacao: "1"
+  item_valor_1: "9900"
+  item_frete_2: "0"
+  commit: Efetuar pagamento!
+  moeda: BRL
+  item_quant_1: "1"
+  item_valor_2: "20000"
+  email_cobranca: fabiano@pprint.com.br
+  item_quant_2: "1"
+  item_peso_1: "0"
+  item_id_1: "1"
+  item_peso_2: "0"
+  item_id_2: "2"
+  item_descr_1: "Passeio rom\xE2ntico de barco"
+  item_descr_2: Passeio de moto
+"2": !map:HashWithIndifferentAccess 
+  tipo: CP
+  item_frete_1: "0"
+  ref_transacao: "2"
+  item_valor_1: "9900"
+  commit: Efetuar pagamento!
+  moeda: BRL
+  item_quant_1: "1"
+  email_cobranca: fabiano@pprint.com.br
+  item_peso_1: "0"
+  item_id_1: "1"
+  item_descr_1: "Passeio rom\xE2ntico de barco"
+"5": !map:HashWithIndifferentAccess 
+  tipo: CP
+  item_frete_1: "0"
+  item_descr_3: Passeio de barco
+  ref_transacao: "5"
+  item_valor_1: "9900"
+  item_frete_2: "0"
+  commit: Efetuar pagamento!
+  moeda: BRL
+  item_quant_1: "1"
+  item_valor_2: "20000"
+  item_frete_3: "0"
+  email_cobranca: user@example.com
+  item_quant_2: "1"
+  item_valor_3: "10000"
+  item_quant_3: "1"
+  item_peso_1: "0"
+  item_id_1: "1"
+  item_peso_2: "0"
+  item_id_2: "2"
+  item_peso_3: "0"
+  item_descr_1: "Passeio rom\xE2ntico de barco"
+  item_id_3: "3"
+  item_descr_2: Passeio de moto

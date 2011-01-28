@@ -1,13 +1,13 @@
 development: &development
   developer: true
   base: "http://localhost:3000"
-  return_to: "/pedido/efetuado"
-  email: user@example.com
+  return_to: "/payments/efetuado"
+  email: fabiano@pprint.com.br
 
 test:
   <<: *development
 
 production:
-  authenticity_token: 9CA8D46AF0C6177CB4C23D76CAF5E4B0
-  email: user@example.com
-  return_to: "/pedido/efetuado"
+  authenticity_token: F63B856166F94697AD35DA0E0C0B7670
+  email: fabiano@pprint.com.br
+  return_to: "/payments/efetuado"

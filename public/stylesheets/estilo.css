@@ -87,9 +87,10 @@ body
 	background-color:transparent;
 	text-align:left;	
 	font-family:Verdana, Geneva, sans-serif;
-	font-size:10px;
+	font-size:9px;
 	color:#FFF;
 	width:50px;
+	font-weight:normal;
 }
 .Titulo5
 {
@@ -106,9 +107,10 @@ body
 	background-color:transparent;
 	text-align:left;	
 	font-family:Verdana, Geneva, sans-serif;
-	font-size:10px;
+	font-size:9px;
 	color:#000;
 	width:50px;
+	font-weight:normal;
 }
 						
 	#Content #Boxleft

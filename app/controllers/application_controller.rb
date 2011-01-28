@@ -41,6 +41,6 @@ class ApplicationController < ActionController::Base
     end
     
     def load_carrinho
-      @cart = Cart.all(:conditions => ['session_id = ?', request.session_options[:id]])
+      @cart = Cart.all(:conditions => ['session_id = ? AND finalizado = 0', request.session_options[:id]])
     end
 end

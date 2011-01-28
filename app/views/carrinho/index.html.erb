@@ -4,41 +4,32 @@
  <div id="Boxcenter">
 		<%=render :file => "/layouts/_top.html.erb"%>
 		<div id="Midboxfoto">
-        	<img src="/images/tit_fotos.png" width="112" height="59"  style="margin:20px 0 10px 30px; float:left;"/>
+        	
        </div>    
-      <img src="images/tit_meucarrinho.png" width="541" height="43"/>   
-<div id="Bottomboxfotos">
-
-
-        <table width="547" height="132" border="0" id="Tabelaviagem">
-          <tr>
-            <td width="176" class="celwhitegray" style="font-family:Verdana, Geneva, sans-serif;font-size:14px;color:#8e005c;">VIAGEM</td>
-            <td width="77" class="celgray" style="font-family:Verdana, Geneva, sans-serif;font-size:14px;color:#8e005c;">PACOTE</td>
+      <img src="/images/tit_meucarrinho.png" width="541" height="43"/>   
+	<div id="Bottomboxfotos">
+		<p style="text-align:center;">
+			Confira os itens do seu carrinho.
+		</p>
+        <table width="547" border="0" id="Tabelaviagem">
+          <tr height="30">
+            <td width="176" class="celwhitegray" style="font-family:Verdana, Geneva, sans-serif;font-size:14px;color:#8e005c;">PACOTE</td>
             <td width="198" class="celwhitegray" style="font-family:Verdana, Geneva, sans-serif;font-size:14px;color:#666;">VALOR R$</td>
             <td width="78" class="celgray" style="font-family:Verdana, Geneva, sans-serif;font-size:14px;color:#666;">EXCLUIR</td>
           </tr>
-          <tr>
-            <td class="celwhite">CHINA</td>
-            <td class="celwhitegray">2</td>
-            <td class="celwhite">200,00</td>
-            <td class="celwhitegray"><img src="images/img_x.png" width="22" height="19" /></td>
+        <%@cart.each do |c|%>
+  		<%q = Quote.find(c.quote_id)%>
+		<tr height="30">
+            <td class="celwhite"><%=q.nome%></td>
+            <td class="celwhite"><%q.valor.to_s%></td>
+            <td class="celwhitegray"><%=link_to image_tag("img_x.png"), excluir_carrinho_item_path(q)%></td>
           </tr>
-          <tr>
-            <td>JAPÃO</td>
-            <td>2</td>
-            <td>200,00</td>
-            <td><img src="images/img_x.png" alt="" width="22" height="19" /></td>
-          </tr>
-          <tr>
-            <td class="celwhite">CHILE</td>
-            <td class="celwhitegray">2</td>
-            <td class="celwhite">200,00</td>
-            <td class="celwhitegray"><img src="images/img_x.png" alt="" width="22" height="19" /></td>
-          </tr>
+		<%end%>
        </table>
          </div>
   <div id="Tabbottom">
-            <a href=""><img src="images/btn_finalizarcompra.png" width="122" height="31"  style="margin:10px 21px 0 0;" /></a><br />
-        	<a href=""><img src="images/btn_voltar.png" width="69" height="17"  style="margin:10px 21px 0 0;" /></a>
+            <%=link_to image_tag("btn_finalizarcompra.png", :style => "margin:10px 21px 0 0;"), finalizar_carrinho_path%>
+			<br />
+        	<a href="javascript:history.go(-1);"><img src="/images/btn_voltar.png" width="69" height="17"  style="margin:10px 21px 0 0;" /></a>
             </div>
         </div>

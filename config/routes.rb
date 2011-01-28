@@ -15,9 +15,10 @@ ActionController::Routing::Routes.draw do |map|
     package.resources :quotes
   end
   
-  map.resources :carrinho, :singular => :carrinho_item, :collection => {:adicionar => :get, :remover => :get}
+  map.resources :carrinho, :singular => :carrinho_item, :collection => {:adicionar => :get, :remover => :get, :finalizar => :get}, :member => {:excluir => :get}
   map.resources :hotels
   map.resources :fotos, :collection => { :ajax => :get}
+  map.resources :payments, :collection => {:efetuado => :post}
   
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"

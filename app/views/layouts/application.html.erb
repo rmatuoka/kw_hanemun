@@ -26,7 +26,7 @@
 	</div>
     <div id="Content">
     	<div id="Boxleft">
-        	<div id="Photo"><%=link_to image_tag(@user.avatar.url("home")), root_path%></div>
+        	<div id="Photo"><%=link_to image_tag(@user.avatar.url("home"), :style => "margin-bottom:10px;"), root_path%></div>
 			<h1 class="Titulo2">Faltam</h1>
 			<div id="Boxfaltamdias"><h1 class="Titulo">180</h1></div>
           

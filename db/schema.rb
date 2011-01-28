@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110127150222) do
+ActiveRecord::Schema.define(:version => 20110127221109) do
 
   create_table "albums", :force => true do |t|
     t.string   "titulo"
@@ -20,10 +20,11 @@ ActiveRecord::Schema.define(:version => 20110127150222) do
   end
 
   create_table "carts", :force => true do |t|
-    t.string   "session_id"
+    t.text     "session_id"
     t.integer  "quote_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "finalizado"
   end
 
   create_table "fotos", :force => true do |t|
@@ -99,6 +100,17 @@ ActiveRecord::Schema.define(:version => 20110127150222) do
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
+
+  create_table "transactions", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "status"
+    t.string   "tipo_pagamento"
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "session_id"
+    t.string   "email"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "username"
