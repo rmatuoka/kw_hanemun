@@ -8,7 +8,7 @@
 <div id="Cotas<%=p.id%>" class="hide">
 	<%
 	counter = 1
-	p.quotes.all.each do |q|
+	p.quotes.all(:conditions => ['indisponivel = 0']).each do |q|
 	%>
 		<div class="Boxpacotes">
 			<h1 class="Titulo4" style="cursor:help;" title="<b><%=q.nome%></b> <br><%=q.descricao%>"><%=truncate(q.nome, 10, "...")%></h1>

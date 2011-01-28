@@ -10,6 +10,14 @@ class PaymentsController < ApplicationController
           transaction.tipo_pagamento = notification.payment_method
           transaction.status = notification.status
           transaction.save
+          
+          #SETA QUOTES COMO INDIPONIVEL
+          carts = Cart.all(:conditions => ['session_id = ?', transaction.session_id])
+          carts.each do |c|
+            q = Quote.find(c.quote_id)
+            q.indisponivel = true
+            q.save
+          end
         end
       end
         render :nothing => true
