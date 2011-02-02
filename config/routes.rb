@@ -19,6 +19,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :hotels
   map.resources :fotos, :collection => { :ajax => :get}
   map.resources :payments, :collection => {:efetuado => :post}
+  map.resources :lista, :singular => :lista_item
+  
   
   map.login "login", :controller => "user_sessions", :action => "new"
   map.logout "logout", :controller => "user_sessions", :action => "destroy"

@@ -162,53 +162,7 @@ body
 				text-align:center;
 				float:none;
 			}
-				#Content #Boxleft #Boxcerimonia
-				{
-					background-image:url(../images/img_back_cerimonia.png);
-					background-repeat:no-repeat;
-					background-position:center top;
-					width:151px;
-					height:61px;
-					padding:35px 0 0 10px;
-					margin:20px auto;
-					text-align:left;
-					
-				}
-				#Content #Boxleft #Boxfesta
-				{
-					background-image:url(../images/img_back_festa.png);
-					background-repeat:no-repeat;
-					background-position:center top;
-					width:151px;
-					height:61px;
-					padding:35px 0 0 10px;
-					margin:20px auto;
-					text-align:left;
-					
-				}
-					#Content #Boxleft #Boxhotel
-					{
-						background-image:url(../images/img_back_hotel.png);
-						background-repeat:no-repeat;
-						background-position:center top;
-						width:151px;
-						height:47px;
-						padding:28px 0 0 15px;
-						margin:20px auto;
-						text-align:left;
-					}
-							#Content #Boxleft #Boxsalao
-							{
-								background-image:url(../images/img_back_salao.png);
-								background-repeat:no-repeat;
-								background-position:center top;
-								width:151px;
-								height:47px;
-								padding:28px 0 0 15px;
-								margin:20px auto;
-								text-align:left;
-							}
-					
+			
 		#Content #Boxright
 		{
 			margin:0px;
@@ -218,30 +172,54 @@ body
 			background-image:url(../images/img_back_boxleftright.png);
 			background-repeat:repeat-x;
 		}
-			#Content #Boxright #Boxviagem
+
+		#Content #Boxright #Boxcerimonia
+		{
+			background-image:url(../images/img_back_cerimonia.png);
+			background-repeat:no-repeat;
+			background-position:center top;
+			width:151px;
+			height:61px;
+			padding:35px 0 0 10px;
+			margin:20px auto;
+			text-align:left;
+			
+		}
+		#Content #Boxright #Boxfesta
+		{
+			background-image:url(../images/img_back_festa.png);
+			background-repeat:no-repeat;
+			background-position:center top;
+			width:151px;
+			height:61px;
+			padding:35px 0 0 10px;
+			margin:20px auto;
+			text-align:left;
+			
+		}
+			#Content #Boxright #Boxhotel
 			{
-				background-image:url(../images/img_viagempara.png);
+				background-image:url(../images/img_back_hotel.png);
 				background-repeat:no-repeat;
 				background-position:center top;
-				padding:10px 0px 0px 0px;
-				width:170px;
-				height:auto;
-				min-height:30px;
-				text-align:center;	
+				width:151px;
+				height:47px;
+				padding:28px 0 0 15px;
+				margin:20px auto;
+				text-align:left;
 			}
-				#Content #Boxright .Boxpacotes
-				{
-					background-image:url(../images/img_backpacotes.png);
-					background-repeat:no-repeat;
-					background-position:center bottom;
-					/*background-color:#ffedd2;*/
-					width:155px;
-					height:22px;
-					padding:3px 0px 0px 15px;
-					min-height:19px;
-					text-align:left;
-					margin-bottom:7px;
-				}
+					#Content #Boxright #Boxsalao
+					{
+						background-image:url(../images/img_back_salao.png);
+						background-repeat:no-repeat;
+						background-position:center top;
+						width:151px;
+						height:47px;
+						padding:28px 0 0 15px;
+						margin:20px auto;
+						text-align:left;
+					}
+
 					#Content #Boxright .Boxmeucarrinho
 					{
 						background-image:url(../images/img_backmeucarrinho.png);
@@ -276,6 +254,7 @@ body
 									height:20px;
 									text-align:left;	
 								}
+
 		#Content #Boxcenter
 		{
 			display:inline-block;
@@ -284,6 +263,32 @@ body
 			margin:auto;
 			float:none;		
 		}
+
+
+		#Content #Boxcenter #Boxviagem
+		{
+			background-image:url(../images/img_viagempara.png);
+			background-repeat:no-repeat;
+			background-position:center top;
+			padding:10px 0px 0px 0px;
+			/*width:170px;*/
+			height:auto;
+			min-height:30px;
+			text-align:center;	
+		}
+			#Content #Boxcenter .Boxpacotes
+			{
+				background-image:url(../images/img_backpacotes.png);
+				background-repeat:no-repeat;
+				background-position:center bottom;
+				/*background-color:#ffedd2;*/
+				width:155px;
+				height:22px;
+				padding:3px 0px 0px 15px;
+				min-height:19px;
+				text-align:left;
+				margin-bottom:7px;
+			}
 							
 					#Content #Boxcenter #Topboxc
 					{

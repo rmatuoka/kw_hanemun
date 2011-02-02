@@ -28,20 +28,29 @@
         	<div id="Photo"><%=link_to image_tag(@user.avatar.url("home"), :style => "margin-bottom:10px;"), root_path%></div>
 			<h1 class="Titulo2">Faltam</h1>
 			<div id="Boxfaltamdias"><h1 class="Titulo">180</h1></div>
-          
+			<div id="ListaDePresentes"><%=link_to "Lista de Presentes", lista_path%></div>
+
 			<!-- INICIO BOX RIGHT -->
+
+		</div>
+
+        <%=yield%>
+
+		<div id="Boxright">
+			
           	<%=render :file => "/layouts/_cerimonia.html.erb"%>
 
 			<%=render :file => "/layouts/_festa.html.erb"%>
-            
+
            	<%=render :file => "/layouts/_hotel.html.erb"%>
-			
+
 			<%=render :file => "/layouts/_salao.html.erb"%>
-		</div>
-		
-            <%=yield%>
-          	
+			
 			<%=render :file => "/layouts/_cotas.html.erb"%>
+			
+		</div>
+  </div>
+		
   </div>
     <div id="Footer"></div>
 </div>
