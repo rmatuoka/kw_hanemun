@@ -27,7 +27,7 @@
     	<div id="Boxleft">
         	<div id="Photo"><%=link_to image_tag(@user.avatar.url("home"), :style => "margin-bottom:10px;"), root_path%></div>
 			<h1 class="Titulo2">Faltam</h1>
-			<div id="Boxfaltamdias"><h1 class="Titulo">180</h1></div>
+			<div id="Boxfaltamdias"><h1 class="Titulo">180/<%= distance_of_time_in_words_to_now(@info.data_cerimonia) %></h1></div>
 			<div id="ListaDePresentes"><%=link_to "Lista de Presentes", lista_path%></div>
 
 			<!-- INICIO BOX RIGHT -->
