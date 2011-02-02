@@ -7,7 +7,6 @@
 </div>	
 <div id="Cotas<%=p.id%>" class="hide">
 	<%
-	counter = 1
 	p.quotes.all(:conditions => ['indisponivel = 0']).each do |q|
 	%>
 		<div class="Boxpacotes">
@@ -16,7 +15,6 @@
 			<%=link_to image_tag("trans.gif", :class =>"botao_carrinho_pacote"), "javascript:adiciona_carrinho(#{q.id});"%>
 		</div>
         <%
-		counter = counter + 1
 		end
 		%>
 		<br>
