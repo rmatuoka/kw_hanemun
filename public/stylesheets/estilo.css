@@ -390,14 +390,15 @@ body
 											text-align:justify;
 										}
 							
+							
 #Footer
 {
 	background-image:url(../images/img_back_foot.png);
 	background-repeat:no-repeat;
 	background-position:center top;
-	margin:20px auto;
+	margin:0px auto;
 	width:596px;
-	height:77px;
+	height:43px;
 }
 
 #PopPacotes
