@@ -28,11 +28,11 @@
        </table>
          </div>
 		<div id="Form">
-			<%form_for new_carrinho_item_path do |f|%>  
+			<%form_for (Transaction.new) do |f|%>  
 			<div id="EmailNome">
-				<%=f.label "Nome" %>
+				<%=f.label :Nome %>
 				<%=f.text_field :nome %><br>
-				<%=f.label "Email" %>
+				<%=f.label :Email %>
 				<%=f.text_field :email %><br>
 			</div>
 			
