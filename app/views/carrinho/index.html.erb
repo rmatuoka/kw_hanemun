@@ -27,9 +27,20 @@
 		<%end%>
        </table>
          </div>
-  <div id="Tabbottom">
-            <%=link_to image_tag("btn_finalizarcompra.png", :style => "margin:10px 21px 0 0;"), finalizar_carrinho_path%>
+		<div id="Form">
+			<%form_for new_carrinho_item_path do |f|%>  
+			<div id="EmailNome">
+				<%=f.label "Nome" %>
+				<%=f.text_field :nome %><br>
+				<%=f.label "Email" %>
+				<%=f.text_field :email %><br>
+			</div>
+			
+		</div>		
+  		<div id="Tabbottom">
+            <%=image_submit_tag("btn_finalizarcompra.png", :style => "margin:10px 21px 0 0;")%>
 			<br />
         	<a href="javascript:history.go(-1);"><img src="/images/btn_voltar.png" width="69" height="17"  style="margin:10px 21px 0 0;" /></a>
             </div>
+			<%end%>
         </div>

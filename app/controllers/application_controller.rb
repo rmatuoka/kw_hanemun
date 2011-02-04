@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
       return @current_user if defined?(@current_user)
       @current_user = current_user_session && current_user_session.record
     end
-    
+        
     def autentica
       if !current_user
         #@user = User.find_by_user
@@ -43,4 +43,5 @@ class ApplicationController < ActionController::Base
     def load_carrinho
       @cart = Cart.all(:conditions => ['session_id = ? AND finalizado = 0', request.session_options[:id]])
     end
+    
 end
