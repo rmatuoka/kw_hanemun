@@ -11,6 +11,13 @@ class PaymentsController < ApplicationController
           transaction.status = notification.status
           transaction.save
           
+          corpo= "<b>Nome:</b>#{transaction.nome}<br />
+                  <b>Email:</b>#{transaction.email}<br />"
+          #se precisar os parametros são Email.deliver_padrao(corpo, "Assunto",email para   #enviar(destino), email para resposta)
+          Email.deliver_padrao(corpo ,"Compra Efetuada")
+
+          
+          
           #SETA QUOTES COMO INDIPONIVEL
           carts = Cart.all(:conditions => ['session_id = ?', transaction.session_id])
           carts.each do |c|
@@ -24,5 +31,6 @@ class PaymentsController < ApplicationController
   end
   
   def show
+    
   end
 end

@@ -13,29 +13,49 @@
 <body>
 <div id="General">
 	<div id="Header">
-		<p style="font-family:Arial, Helvetica, sans-serif;font-size:12px;color:#960062; text-align:right; margin:20px 0 0 20px;">
 		<%if current_user %>
-			<%=link_to "Editar Pacotes", packages_path%> | 
- 			<%=link_to image_tag("icons/editar.png") + "Editar Profile", edit_user_path(:current)%> |
-			<%=link_to "Logout", logout_path%>
+			<%=image_tag("tit_olaheadernomes.png")%>
+			<%=link_to image_tag("btn_efetuarlogin.png", :align=>"right"), logout_path%>
 		<%else%>
-			<%=link_to "Login", login_path%>
+			<%=link_to image_tag("btn_efetuarlogin.png", :align=>"right"), login_path%>
 		<%end%>
-		</p>
 	</div>
     <div id="Content">
     	<div id="Boxleft">
-        	<div id="Photo"><%=link_to image_tag(@user.avatar.url("home"), :style => "margin-bottom:10px;"), root_path%></div>
+        	<div id="Photo">
+				<%=link_to image_tag(@user.avatar.url("home"), :style => "margin-bottom:10px;"), root_path%>
+			</div>
 			<h1 class="Titulo2">Faltam</h1>
-			<div id="Boxfaltamdias"><h1 class="Titulo"><%= "#{((((@info.data_cerimonia - Time.now).abs)/60)/1440).round} days" %></h1></div>
-			<div id="ListaDePresentes"><%=link_to "Lista de Presentes", lista_path%></div>
-
-			<!-- INICIO BOX RIGHT -->
-
+			<div id="Boxfaltamdias"><h1 class="Titulo"><%= "#{((((@info.data_cerimonia - Time.now).abs)/60)/1440).round} dias" %></h1></div>
+            <div class="Box_laterais">
+            	<%= image_tag("tit_listadepresentes.png")%>
+               <div class="Back_box">
+                <div class="Text_box">
+                  <p>Click aqui e veja as opções de presentes<p><%=link_to image_tag("btn_leiamais.png", :align=>"right", :style=>" margin:-3px auto"),lista_path%><br /></p></p>
+                </div>
+               </div>
+            </div>
+            <div class="Box_laterais">
+            	<%= image_tag("tit_galeriadefotos.png")%>
+               <div class="Back_box">
+                <div class="Text_box">
+                  <p>Click e veja nossas fotos<p><%=link_to image_tag("btn_leiamais.png", :align=>"right", :style=>" margin:-3px auto"), albums_path%><br /></p></p>
+                </div>
+               </div>
+            </div>      
+            <div class="Box_laterais">
+            	<%= image_tag("tit_vermensagens.png")%>
+               <div class="Back_box">
+                <div class="Text_box">
+                  <p>Veja nosso mural de mensagens<p><%=link_to image_tag("btn_leiamais.png", :align=>"right", :style=>" margin:-3px auto"), mensagens_path%><br /></p></p>
+                </div>
+               </div>
+            </div>                     
 		</div>
 
         <%=yield%>
 
+			<!-- INICIO BOX RIGHT -->
 		<div id="Boxright">
 			
           	<%=render :file => "/layouts/_cerimonia.html.erb"%>
@@ -52,7 +72,7 @@
   </div>
 		
   </div>
-    <div id="Footer"><a href="http://www.korewa.com.br"><img src="images/img_logokorewa.png" align="right" style="margin:3px 30px auto;"/></a></div>
-</div>
+  <div id="Footer"><%=link_to image_tag("img_logokorewa.png", :align=>"right", :style=>"margin:3px 30px auto"), "http://www.korewa.com.br"%></div>
+
 </body>
 </html>

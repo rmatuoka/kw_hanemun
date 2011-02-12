@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+#Content #Boxcenter #Boxmensagem
+{
+	font-weight:bold;
+	text-align:left;
+	width:542px;
+	height:131px;
+	background-image:url(../images/img_back_itemfoto.jpg);
+	background-repeat:repeat-x;
+	background-position:top;
+	margin:auto;
+	display:inline-block;
+}
+#Content #Boxcenter #Box_bigfoto
+{
+	width:545px;
+	height:400px;
+	background-color:#FFF;
+	padding:10px 5px 10px 5px;
+}
+#Content #Boxcenter #Box_texto
+{
+	font-weight:bold;
+	text-align:left;
+	width:545px;
+	height:88px;
+	background-image:url(../images/img_back_text_jquery.jpg);
+	background-repeat:repeat-x;
+	display:inline-block;
+	margin:auto;
+	padding:10px 5px 10px 5px;
+}
+
+	#Content #Boxcenter #Boxmensagem p
+	{
+		font:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		font-weight:normal;
+		color:#9e8357;
+	}
+		#Content #Boxcenter #Boxmensagem b
+		{
+			font:Arial, Helvetica, sans-serif;
+			font-size:12px;
+			color:#9e8357;
+		}
+#Content #Boxcenter #Box_fotolista 
+{
+	display:inline-block;
+	padding:5px 5px 5px 5px;
+	text-align:center;
+	background-color:#FFF;
+	width:90px;
+	height:90px;
+}
+	#Content #Boxcenter #Box_textolista 
+	{
+		display:block;
+		text-align:center;
+		width:542px;
+		height:130px;
+		margin:auto;
+		
+	}
+		#Content #Boxcenter #Texto_box 
+		{
+			display:inline-block;
+			text-align:center;
+			width:510px;
+			height:90px;
+			margin:20px auto;
+			vertical-align:top;
+		}
+	
+	.Assinatura
+	{
+			display:block;
+			font:Arial, Helvetica, sans-serif;
+			font-size:12px;
+			color:#9e8357;
+			width:100%;
+			text-align:right;
+	}
+#Content #Boxcenter #Midboxfoto
+{
+	width:auto;
+	height:auto;
+	margin:auto;	
+}
+#Content #Boxcenter #Bottomboxmensagens 
+{
+	display:inline-block;
+	height:auto;
+	width:auto;
+	padding:10px 10px 10px 10px;
+	margin:auto;
+}
+	#Content #Boxcenter #Bottomboxfotos #Boxlistafotos
+	{
+		margin:auto;
+		width:542px;
+		height:auto;		
+	}
+.Titulofotos
+{
+	background-image:url(../images/tit_backvideos.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	padding:4px 0 0 5px;
+	width:auto;
+	height:20px;
+	color:#858585;
+	text-align:left;
+	margin:auto;	
+}
+#Mapa_box
+{
+	display:block;
+	margin:auto;
+	background-image:url(../images/img_back_mapas.jpg);
+	background-repeat:repeat-x;
+	width:570px;
+	height:510px;
+}
+#Mapa_back
+{
+	display:inline-block;
+	margin:auto;
+	background-color:#FFF;
+	width:435px;
+	height:355px;
+	padding:5px 0 0 0;
+}
+#Mapa_texto
+{
+	display:block;
+	margin:auto;
+	width:430px;
+	height:55px;
+	padding:10px 0 0 0;
+}
+	#Mapa_texto p 
+	{
+		font:Arial, Helvetica, sans-serif;
+		font-size:12px;
+		font-weight:normal;
+		color:#9e8357;
+		text-decoration:none;
+	}
+		#Mapa_texto b 
+		{
+			font:Arial, Helvetica, sans-serif;
+			font-size:12px;
+			font-weight:bold;
+			color:#9e8357;
+		}
+			#Mapa_texto a
+			{
+				font:Arial, Helvetica, sans-serif;
+				font-size:12px;
+				font-weight:normal;
+				color:#9e8357;
+			}

@@ -1,0 +1,27 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "mensagens"%>
+<%end%>
+
+<div id="Boxcenter">
+    <%=render :file => "/layouts/_top.html.erb"%>
+    <div id="Midboxfoto">
+		<%= image_tag("tit_mensagens.png", :style =>"margin:0 0 10px 0;")%>
+	</div>
+	<%@mensagens.each do |m|%>
+	<div id="Boxmensagem">
+		<p>
+			<%=m.mensagem%>
+	    </p>
+		<div class="Assinatura">
+			<%if current_user%>
+				<%=link_to image_tag("icons/excluir.png"), m, :confirm => 'Deseja excluir esta mensagem?', :method => :delete%>
+			<%end%>
+			<%=m.from%>
+		</div>
+	</div>
+	<%end%>
+	<div id="Box_paginas">
+    	<div id="Pagina_top"><img src="images/tit_paginas.png" style="margin:5px auto;"></div>
+		<%= will_paginate @mensagens, options ={:prev_label => "<", :next_label => ">"} %>
+  	</div>
+</div>

@@ -8,6 +8,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :home
   map.resources :transactions
+  map.resources :mensagens
+  map.resources :cerimonias
   map.resources :albums do |album|
     album.resources :fotos
   end
@@ -21,6 +23,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :fotos, :collection => { :ajax => :get}
   map.resources :payments, :collection => {:efetuado => :post}
   map.resources :lista, :singular => :lista_item
+  map.resources :recepcao, :singular => :recepcao_local
   
   
   map.login "login", :controller => "user_sessions", :action => "new"

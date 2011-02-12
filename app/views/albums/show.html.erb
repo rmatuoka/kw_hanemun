@@ -1,6 +1,10 @@
 <%content_for :head do%>
+<%= stylesheet_link_tag "foto_int"%>
+<%= stylesheet_link_tag "skin"%>
 <%= javascript_include_tag "jquery/jquery" %>
 <%= javascript_include_tag "jquery/jquery.tools.min.js" %>
+<%= javascript_include_tag "jquery.jcarousel.min.js" %>
+
 	<script>
 	function carrega_foto(id_foto)
 	{
@@ -14,32 +18,44 @@
 			}
 		});
 	}
+	
+	jQuery(document).ready(function() {
+	    jQuery('#mycarousel').jcarousel({
+	        // Configuration goes here
+	    });
+	});
 	</script>
 <%end%>
 <div id="Boxcenter">
     <%=render :file => "/layouts/_top.html.erb"%>
     <div id="Midboxfoto">
-		<p style="text-align:left;">
-			<%=link_to "<img src='/images/tit_fotos.png'  style='margin:20px 0 10px 30px;'/>", albums_path%>
-		</p>
-	</div>
-  
-	<%if !@fotos.blank?%>
-	<div id="Bottomboxfotos">
-    	<h1 class="Titulofotos"><%=@album.titulo%>: <%=@total_de_fotos%></h1>
-    	<div id="Boxlistafotos">
- 	 		
-    	</div>
-    
-    	<%@fotos.each do |f|%>
-			<a href="javascript:void(0);" onclick="carrega_foto(<%=f.id%>)"><%=image_tag(f.image.url("thumb"))%></a>
-		<%end%>
-	
-	</div>
-	<%end%>
-	
-	<%if current_user%>
-		<%=link_to image_tag("icons/adicionar.png") + "adicionar foto", new_album_foto_path(@album)%>
-	<%end%>
+	    <div class="Tit_edit"><h1>Nossos Momentos</h1></div>
+    </div>
+		  <%if !@fotos.blank?%>
+          <div id="Bottomboxfotos">
+            <div id="Boxlistafotos">
+             
+            </div>
+            <div id="Back_jquery">
+				<%if current_user%>
+			  	<%=link_to image_tag("icons/adicionar.png") + "adicionar foto", new_album_foto_path(@album)%>
+			    <%end%>
+      			<div id="Box_jquery">
+                        <div id="Img_jquery">
+							<ul id="mycarousel" class="jcarousel-skin-tango">
+							<%
+							@fotos.each do |f|
+							counter = 1
+							%>
+								<li class="jcarousel-item-<%=counter%>"><a href="javascript:void(0);" onclick="carrega_foto(<%=f.id%>)"><%=image_tag(f.image.url("thumb"))%></a></li>
+							<%
+							counter = counter + 1
+							end
+							%>
+							</ul>
+                        </div>
+                </div>
+            </div>
+          </div>
+		  <%end%>	
 </div>
-

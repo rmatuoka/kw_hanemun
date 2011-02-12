@@ -4,43 +4,40 @@
  <div id="Boxcenter">
 		<%=render :file => "/layouts/_top.html.erb"%>
 		<div id="Midboxfoto">
-        	
-       </div>    
-      <img src="/images/tit_meucarrinho.png" width="541" height="43"/>   
-	<div id="Bottomboxfotos">
-		<p style="text-align:center;">
-			Confira os itens do seu carrinho.
-		</p>
-        <table width="547" border="0" id="Tabelaviagem">
-          <tr height="30">
-            <td width="176" class="celwhitegray" style="font-family:Verdana, Geneva, sans-serif;font-size:14px;color:#8e005c;">PACOTE</td>
-            <td width="198" class="celwhitegray" style="font-family:Verdana, Geneva, sans-serif;font-size:14px;color:#666;">VALOR R$</td>
-            <td width="78" class="celgray" style="font-family:Verdana, Geneva, sans-serif;font-size:14px;color:#666;">EXCLUIR</td>
-          </tr>
-        <%@cart.each do |c|%>
-  		<%q = Quote.find(c.quote_id)%>
-		<tr height="30">
-            <td class="celwhite"><%=q.nome%></td>
-            <td class="celwhite"><%q.valor.to_s%></td>
-            <td class="celwhitegray"><%=link_to image_tag("img_x.png"), excluir_carrinho_item_path(q)%></td>
-          </tr>
-		<%end%>
-       </table>
-         </div>
-		<div id="Form">
+        <%= image_tag("tit_confiraseupedido.png", :style => "margin:0 0 10px 0;")%>	
+        </div>    
+		<div id="Bottomboxmensagens">
+       	   <div id="Confira_box">
+               <table width="540" class="Tabelaitem">
+				 <%@cart.each do |c|%>
+		  		 <%q = Quote.find(c.quote_id)%>
+                 <tr>
+                   <td width="336"><p class="Textoitem1"><%=q.nome%></p></td>
+                   <td width="119"><p class="Textoitem1"><%=q.valor.to_s%></p></td>
+                   <td width="59"><%=link_to image_tag("btn_comprar.png", :style => "margin:3px auto"), excluir_carrinho_item_path(q)%></td>
+                 </tr>
+				 <%end%>
+               </table>
+           </div>
+           <div id="Form">
 			<%form_for (Transaction.new) do |f|%>  
-			<div id="EmailNome">
-				<%=f.label :Nome %>
-				<%=f.text_field :nome %><br>
-				<%=f.label :Email %>
-				<%=f.text_field :email %><br>
-			</div>
-			
-		</div>		
-  		<div id="Tabbottom">
-            <%=image_submit_tag("btn_finalizarcompra.png", :style => "margin:10px 21px 0 0;")%>
-			<br />
-        	<a href="javascript:history.go(-1);"><img src="/images/btn_voltar.png" width="69" height="17"  style="margin:10px 21px 0 0;" /></a>
-            </div>
-			<%end%>
+				<div id="EmailNome">
+		        	<table width="546" border="0" id="TabelaEmailNome">
+		          		<tr height="20">
+		            		<td width="273" style="font-family:Verdana, Geneva, sans-serif;font-size:12px;color:#8e005c; text-align: left;"><%=f.label :nome,"Seu nome" %></td>
+		            		<td width="273" style="font-family:Verdana, Geneva, sans-serif;font-size:12px;color:#8e005c; text-align: left;"><%=f.label :email,"Seu e-mail" %></td>
+		          		</tr>				
+				  		<tr height="20">
+							<td style="text-align: left;"><%=f.text_field :nome, :size => 45, :value => "Nome Completo"%></td>
+							<td style="text-align: left;"><%=f.text_field :email, :size => 45, :value => "E-mail"%></td>
+				  		</tr>
+					</table>
+				</div>			
+		   </div>
+           <div id="Confirma_box">
+				<%=link_to image_tag("btn_continuarcomprando.png", :align => "left"), lista_path%>
+				<%=image_submit_tag("btn_finalizarcompra.png", :align => "right")%>
+		   </div>	
         </div>
+		<%end%>
+</div>

@@ -1,0 +1,91 @@
+
+#Midboxlista
+{
+	width:auto;
+	height:auto;
+	margin:auto;	
+}
+#Bottomboxlista
+{
+	background-image:url(../images/img_back_listapresentestexto.jpg);
+	background-repeat:repeat-x;
+	background-position:top center;
+	width:600px;
+	height:auto;
+	margin:16px auto;		
+}
+	#Box_listapresentestexto
+	{
+		width:541px;
+		height:451px;
+		margin:20px auto;	
+	}
+			#Box_listapresentestexto P
+			{
+				font-family:Arial, Helvetica, sans-serif;
+				color:#9e8357;
+				font-size:12px;	
+			}
+	#Box_listapresentes
+	{
+		width:auto;
+		height:auto;
+		margin:auto;		
+	}
+#Aba_compra
+{
+	margin:auto;
+	width:600px;
+	height:auto;
+}
+	#Titulo_compra
+	{
+
+		background-image:url(../images/tit_listaitemback.png);
+		background-repeat:no-repeat;
+		background-position:top;
+		margin:auto;
+		width:600px;
+		height:38px;
+	}
+		#Titulo_compra h1
+		{
+			font-family:Verdana, Geneva, sans-serif;
+			color:#FFF;
+			font-size:14px;
+			width:60px;
+			height:auto;
+			padding:10px 0 0 40px;
+		}
+			#Lista_compra
+			{
+				margin:auto;
+				width:600px;
+				height:auto;
+			}
+					#Item_compra
+					{
+						background-image:url(../images/img_back_listapresentesboxcompra.jpg);
+						background-repeat:repeat-x;
+						margin:auto;
+						width:589px;
+						height:50px;
+					}
+						.Tabelaitem
+						{
+							border-collapse:collapse;
+							border:none;
+							margin:auto;
+						}
+							.Textoitem1
+							{
+								font-family:Verdana, Geneva, sans-serif;
+								color:#5c5c5c;
+								font-size:11px;
+							}
+							.Textoitem2
+							{
+								font-family:Arial, Helvetica, sans-serif;
+								color:#9a5e00;
+								font-size:11px;						
+							}

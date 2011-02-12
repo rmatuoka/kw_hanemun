@@ -6,58 +6,27 @@
             <%=render :file => "/layouts/_top.html.erb"%>    
            
 			<div id="Midboxc">
-                <%=link_to image_tag("tit_fotos.png", :style => "margin:20px 45px 0 0px"), albums_path %>
-                
+				<img src="images/tit_nossahistoria.png" width="540" height="31" /><br /><br />
+				<%if current_user%>
+					<%=link_to image_tag("icons/editar.png") + "Editar Profile", edit_user_path(:current)%>
+				<%end%>
+				<%=@user.historia%>
+			</div>
+			<div id="Bottomboxc">
+            	<img src="images/tit_deixesuamensagem.png"/><br /><br />
 				<% form_for @user.scrapbooks.build do |f| %>
 					<p style="height:auto; margin:0 0 0 0;font:Verdana, Geneva, sans-serif;color:#ac4280;">
 						<%= f.label :de %><br />
-						<%= f.text_field :from, :style => "width:125px;height:21px; border:#ffdaf7 solid 1px; padding:0 0 0 3px"%>
+						<%= f.text_field :from, :value => "Nome Completo", :style => "width:125px;height:21px; border:#ffdaf7 solid 1px; padding:0 0 0 3px"%>
 						<br />
 						
 						<%= f.label :mensagem %>
-						<%= f.text_area :mensagem, :style =>"width:550px;height:95px; margin:0 0 0px 0; border:#ffdaf7 solid 1px; padding:0 0 0 3px;" %>
+						<%= f.text_area :mensagem, :value=> "Insira aqui sua mensagem...", :style =>"width:528px;height:95px; margin:0 0 0px 0; border:#ffdaf7 solid 1px; padding:0 0 0 3px;" %>
 
 		            </p>  
 				  <p style="text-align:right;">
-					<%=image_submit_tag "btn_enviarmensagem.png", :style => "width:149px; margin:13px 25px 0 0;"  %>
+					<%=image_submit_tag "btn_enviarmensagem.png", :style => "width:149px; margin:13px 25px 20px 0;"  %>
 				</p>
 				<% end %>
-
-	    
-                <div id="SobreNos">
-					<h1 class="Titulo">
-						Sobre nós 
-					<%if current_user%>
-						| <%=link_to image_tag("icons/editar.png") + "editar", edit_user_path(:current)%>
-					<%end%>
-					</h1>
-				</div>
-
-				<center>
-				<div style="width:530px;">
-					<p style="text-align:left; display:block; margin:0px 0 0 0;font-weight:normal;">
-	                	<!-- NOSSA HISTORIA -->
-						<%=@user.historia%><br>
-						<br>
-	                </p>
-				</div>
-				</center>
-				
-           </div>
-
-             <div id="Bottomboxc">
-	                <div id="Ultimasat"><h1 class="Titulo">Últimas Atualizações</h1></div>
-					<div style="text-align:center;">
-	                	<%@mensagens.each do |m|%>
-						<div id="BoxAtualiza" style="width:530px; margin:auto; text-align:left;">
-		                    <h1><%=link_to image_tag("icons/excluir.png"), m, :confirm => 'Deseja excluir esta mensagem?', :method => :delete%><%=m.from%></h1>
-		                  	<p>
-								<%=m.mensagem%>
-		                    </p>
-		                </div>
-						<%end%>
-					</div>
-
-	            <!-- <img src="images/btn_maisatualizacoes.png" width="149" height="17" align="center" style="" /> -->
-	            </div>
-	        </div>
+            </div>		
+</div>		

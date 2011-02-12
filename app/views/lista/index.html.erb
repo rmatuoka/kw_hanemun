@@ -1,24 +1,44 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "listapresentes"%>
+<%end%>
 <div id="Boxcenter">
-	<div id="PopPacotes" style="display:none;"></div>
-
+    <%=render :file => "/layouts/_top.html.erb"%>
+    <div id="Midboxlista">
+    <%= image_tag("tit_listadepresentesinterna.png")%>
+    </div>
+	<div id="Bottomboxlista">
+    <div id="Box_listapresentestexto">
+		<!--Nao ficou definido o texto que vai vir aqui-->
+        <p>Lista de Presentes</p><br /><br />                
+        
+    </div>
+    <div id="Box_listapresentes">
 		<%@packages_box.each do |p|%>
-	<div id="Boxviagem" style="cursor:pointer;" onclick="mostra_cota(<%=p.id%>)">
-		<h1 class="Titulo"><%=p.nome%></h1>
-	</div>	
-	<div id="Cotas<%=p.id%>" class="hide">
-		<%
-		p.quotes.all(:conditions => ['indisponivel = 0']).each do |q|
-		%>
-				<div class="Boxpacotes">
-				<h1 class="Titulo4" style="cursor:help;" title="<b><%=q.nome%></b> <br><%=q.descricao%>"><%=truncate(q.nome, 10, "...")%></h1>
-				<h1 class="Titulo5">R$ <%=q.valor%></h1>
-				<%=link_to image_tag("trans.gif", :class =>"botao_carrinho_pacote"), "javascript:adiciona_carrinho(#{q.id});"%>
-			</div>
-	        <%
-			end
-			%>
-			<br>
-	</div>
-		<%end%>
-
+        <div id="Aba_compra">
+            <div id="Titulo_compra"><h1><%=p.nome%></h1></div>
+                <div id="Lista_compra<%=p.id%>">
+					<%
+					p.quotes.all(:conditions => ['indisponivel = 0']).each do |q|
+					%>
+                    <div id="Item_compra">
+                        <table width="540" class="Tabelaitem">
+                          <tr>
+                            <td width="336"><p class="Textoitem1"><%=q.nome%></p></td>
+                            <td width="119"><p class="Textoitem1"> R$ <%=q.valor%></p></td>
+                            <td width="59"><%=link_to image_tag("btn_comprar.png", :style =>"margin:3px auto"), "javascript:adiciona_carrinho(#{q.id});"%></td>
+                          </tr>
+                          <tr>
+                            <td colspan=3><p class="Textoitem2"><%=q.descricao%></p></td>
+                          </tr>
+                        </table>
+        
+                    </div>
+					<%
+					end
+					%>
+                </div>
+            </div>
+    	<%end%>
         </div>
+    </div>
+</div>

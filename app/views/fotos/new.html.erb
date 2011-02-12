@@ -1,12 +1,11 @@
 <%content_for :head do%>
 	<%=stylesheet_link_tag "foto"%>
 <%end%>
-
 <div id="Boxcenter">
 	<%=render :file => "/layouts/_top.html.erb"%>
 	
 	<div id="Midboxfoto">
-		<img src="/images/tit_fotos.png" width="112" height="59"  style="margin:20px 0 10px 30px; float:left;"/>
+		<%= image_tag("tit_fotos.png", :style =>"margin:0 0 10px 0;")%>
 	</div>
 	
 	<div id="Bottomboxfotos">

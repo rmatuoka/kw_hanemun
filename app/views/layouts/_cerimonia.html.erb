@@ -1,10 +1,14 @@
-<div id="Boxcerimonia">
-	<ul>
-    	<li>Data: <%=@info.data_cerimonia.to_date.strftime("%d/%m/%Y")%></li>
-	    <li>Horário: <%=@info.data_cerimonia.to_time.strftime("%H:%M:%S")%></li>
-	    <li>Local: <%=@info.local_cerimonia%></li>
-		<%if current_user%>
-			<%=link_to image_tag("icons/editar.png") + "editar", edit_info_path(@info)%>
-		<%end%>
-    </ul>
+<div class="Box_laterais">
+ 	<%= image_tag("tit_cerimonia.png")%>
+    <div class="Back_box">
+     <div class="Text_box">
+         <p><p>Dia: <%=@info.data_cerimonia.to_date.strftime("%d/%m/%Y")%></p>
+            <p>Horário: <%=@info.data_cerimonia.to_time.strftime("%H:%M:%S")%></p>
+            <p>Local: <%=@info.local_cerimonia%></p>
+            <p><%=link_to image_tag("btn_leiamais.png", :align=>"right", :style=>" margin:-3px auto"), cerimonias_path%><br /></p></p>
+			<%if current_user%>
+				<%=link_to image_tag("icons/editar.png") + "editar", edit_info_path(@info)%>
+			<%end%>
+     </div>
+    </div>
 </div>
