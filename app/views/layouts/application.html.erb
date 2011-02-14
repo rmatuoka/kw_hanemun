@@ -15,7 +15,7 @@
 	<div id="Header">
 		<%if current_user %>
 			<%=image_tag("tit_olaheadernomes.png")%>
-			<%=link_to image_tag("btn_efetuarlogin.png", :align=>"right"), logout_path%>
+			<%=link_to image_tag("btn_efetuarlogoff.png", :align=>"right"), logout_path%>
 		<%else%>
 			<%=link_to image_tag("btn_efetuarlogin.png", :align=>"right"), login_path%>
 		<%end%>
