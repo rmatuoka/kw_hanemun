@@ -34,14 +34,14 @@
 
 	#Content #Boxcenter #Boxfoto p
 	{
-		font:Arial, Helvetica, sans-serif;
+		font:Verdana, Helvetica, sans-serif;
 		font-size:12px;
 		font-weight:normal;
 		color:#9e8357;
 	}
 		#Content #Boxcenter #Boxfoto b
 		{
-			font:Arial, Helvetica, sans-serif;
+			font:Verdana, Helvetica, sans-serif;
 			font-size:12px;
 			color:#9e8357;
 		}
@@ -133,7 +133,7 @@
 				}
 					.Botao_paginas .Btn
 					{
-						font-family:Arial, Helvetica, sans-serif;
+						font-family:Verdana, Helvetica, sans-serif;
 						color:#d68f25;
 						font-size:18px;
 						display:inline-block;
