@@ -52,9 +52,10 @@
 			font-family:Verdana, Geneva, sans-serif;
 			color:#FFF;
 			font-size:14px;
-			width:60px;
+			width:300px;
 			height:auto;
 			padding:10px 0 0 40px;
+			text-align:left;
 		}
 			#Lista_compra
 			{

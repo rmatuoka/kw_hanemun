@@ -6,11 +6,11 @@
            <%=render :file => "/layouts/_top.html.erb"%>
            <div id="Vazia"></div>
             <div id="Bottomboxchoteis">
-            	<h1 class="Titlista">
-					LISTA DE HOTEIS 
+            	<h1 class="Titlista">LISTA DE HOTEIS</h1> 
 				<%if current_user%>
-					<%=link_to "+ adicionar novo", new_hotel_path%></h1>
+					<%=link_to "+ adicionar novo", new_hotel_path%>
                 <%end%>
+
 				<%@hotels.each do |h|%>
 				<div id="Boxlista">
                     <p>
