@@ -17,7 +17,7 @@ class ScrapbooksController < ApplicationController
     @scrapbook = @user.scrapbooks.create(params[:scrapbook])
     if @scrapbook.save
       flash[:notice] = "Successfully created scrapbook."
-      redirect_to root_path
+      redirect_to mensagens_path
     else
       render :action => 'new'
     end

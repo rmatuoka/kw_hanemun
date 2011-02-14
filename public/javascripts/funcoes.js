@@ -32,17 +32,17 @@ function remove_carrinho(id)
 
 function mostra_cota(x)
 {
-	if($("#Cotas" + x).hasClass('hide'))
+	if($("#Lista_compra" + x).hasClass('hide'))
 	{
 		//MOSTRA
-		$("#Cotas" + x).slideDown('slow');
-		$("#Cotas" + x).removeClass('hide')
+		$("#Lista_compra" + x).slideDown('slow');
+		$("#Lista_compra" + x).removeClass('hide')
 	}
 	else
 	{
 		//ESCONDE\
-		$("#Cotas" + x).slideUp('slow');
-		$("#Cotas" + x).addClass('hide')
+		$("#Lista_compra" + x).slideUp('slow');
+		$("#Lista_compra" + x).addClass('hide')
 	}
 }
 

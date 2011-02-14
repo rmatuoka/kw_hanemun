@@ -17,7 +17,7 @@
 						<%if current_user%>
 							<%=link_to "Excluir", h, :confirm => 'Confirme a exclusão do hotel.', :method => :delete%> | 
 						<%end%>
-						<b><%=h.nome%></b> | Tel: <%=h.telefone%> | Site: <%=link_to h.site, h.site, :target => "_blank"%> 
+						<b><%=h.nome%></b> | Tel: <%=h.telefone%> | Endereço: <%=link_to h.site, h.site, :target => "_blank"%> 
 					</p>
                 </div>
 				<%end%>

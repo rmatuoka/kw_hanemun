@@ -13,8 +13,8 @@
 		  		 <%q = Quote.find(c.quote_id)%>
                  <tr>
                    <td width="336"><p class="Textoitem1"><%=q.nome%></p></td>
-                   <td width="119"><p class="Textoitem1"><%=q.valor.to_s%></p></td>
-                   <td width="59"><%=link_to image_tag("btn_comprar.png", :style => "margin:3px auto"), excluir_carrinho_item_path(q)%></td>
+                   <td width="119"><p class="Textoitem1"><%=number_to_currency(q.valor.to_s)%></p></td>
+                   <td width="59"><%=link_to image_tag("btn_excluir.png", :style => "margin:3px auto"), excluir_carrinho_item_path(q)%></td>
                  </tr>
 				 <%end%>
                </table>
