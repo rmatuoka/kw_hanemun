@@ -1,6 +1,13 @@
 @charset "utf-8";
 /* CSS Document */
-	#Content #Boxcenter #Bottomboxc #Boxlista
+#Content #Boxcenter #Bottomboxsaloes
+{
+	width:600px;
+	height:450px;
+	margin:auto;
+	background-color:#fff;	
+}
+	#Content #Boxcenter #Bottomboxsaloes #Boxlista
 	{
 		background-image:url(../images/img_back_listahs.png);
 		background-repeat:no-repeat;
