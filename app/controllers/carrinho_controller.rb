@@ -3,7 +3,11 @@ class CarrinhoController < ApplicationController
   layout "application", :except => [:adicionar, :remover]
   
   def index
-    
+    @total = 0
+    @cart.each do |c|
+      q = Quote.find(c.quote_id)
+      @total += q.valor
+    end
   end
   
   def new

@@ -14,16 +14,16 @@
 				<%=@user.historia%>
 				</div>
 			</div>
-			<div id="Bottomboxc">
+			<div id="Bottomboxc">	
             	<img src="images/tit_deixesuamensagem.png"/><br /><br />
 				<% form_for @user.scrapbooks.build do |f| %>
 					<p style="height:auto; margin:0 0 0 0;font:Verdana, Geneva, sans-serif;color:#ac4280;">
 						<%= f.label :de %><br />
-						<%= f.text_field :from, :value => "Nome Completo", :style => "width:125px;height:21px; border:#ffdaf7 solid 1px; padding:0 0 0 3px"%>
+						<%= f.text_field :from, :value => "Nome Completo", :style => "width:125px;height:21px; border:#ffdaf7 solid 1px; padding:0 0 0 3px", :onblur=> "if(this.value == '') { this.value='Nome Completo'}", :onfocus=> "if (this.value == 'Nome Completo') {this.value=''}"%>
 						<br />
 						
 						<%= f.label :mensagem %>
-						<%= f.text_area :mensagem, :value=> "Insira aqui sua mensagem...", :style =>"width:528px;height:95px; margin:0 0 0px 0; border:#ffdaf7 solid 1px; padding:0 0 0 3px;" %>
+						<%= f.text_area :mensagem, :value=> "Insira aqui sua mensagem...", :style =>"width:528px;height:95px; margin:0 0 0px 0; border:#ffdaf7 solid 1px; padding:0 0 0 3px;", :onblur=> "if(this.value == '') { this.value='Insira aqui sua mensagem...'}", :onfocus=> "if (this.value == 'Insira aqui sua mensagem...') {this.value=''}" %>
 
 		            </p>  
 				  <p style="text-align:right;">
