@@ -18,6 +18,7 @@
                  </tr>
 				 <%end%>
                </table>
+		   <br />
            </div>
            <div id="Form">
 			<%form_for (Transaction.new) do |f|%>  
@@ -25,15 +26,16 @@
 		        	<table width="546" border="0" id="TabelaEmailNome">
 		          		<tr height="20">
 		            		<td width="273" style="font-family:Verdana, Geneva, sans-serif;font-size:12px;color:#8e005c; text-align: left;"><%=f.label :nome,"Seu nome" %></td>
-		            		<td width="273" style="font-family:Verdana, Geneva, sans-serif;font-size:12px;color:#8e005c; text-align: left;"><%=f.label :email,"Seu e-mail" %></td>
+		            		<td width="273" style="font-family:Verdana, Geneva, sans-serif;font-size:12px;color:#8e005c; text-align: left;"><%=f.label :email,"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Seu e-mail" %></td>
 		          		</tr>				
 				  		<tr height="20">
 							<td style="text-align: left;"><%=f.text_field :nome, :size => 45, :value => "Nome Completo"%></td>
-							<td style="text-align: left;"><%=f.text_field :email, :size => 45, :value => "E-mail"%></td>
+							<td style="text-align: right;"><%=f.text_field :email, :size => 45, :value => "E-mail"%></td>
 				  		</tr>
 					</table>
 				</div>			
 		   </div>
+		   <br />
            <div id="Confirma_box">
 				<%=link_to image_tag("btn_continuarcomprando.png", :align => "left"), lista_path%>
 				<%=image_submit_tag("btn_finalizarcompra.png", :align => "right")%>

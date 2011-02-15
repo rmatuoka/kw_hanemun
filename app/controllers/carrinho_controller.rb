@@ -30,8 +30,7 @@ class CarrinhoController < ApplicationController
           flash[:notice] = "Erro ao salvar item no carrinho. Contate o adminstrador do site"
         end
       end
-    end
-    
+    end    
     gera_carrinho
   end
   

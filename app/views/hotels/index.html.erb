@@ -4,9 +4,8 @@
 
 <div id="Boxcenter">
            <%=render :file => "/layouts/_top.html.erb"%>
-           <div id="Vazia"></div>
             <div id="Bottomboxchoteis">
-            	<h1 class="Titlista">LISTA DE HOTEIS</h1> 
+            	<span class="Titlista"><%= image_tag("tit_listahoteis.png")%></span>
 				<%if current_user%>
 					<%=link_to "+ adicionar novo", new_hotel_path%>
                 <%end%>
@@ -15,9 +14,9 @@
 				<div id="Boxlista">
                     <p>
 						<%if current_user%>
-							<%=link_to "Excluir", h, :confirm => 'Confirme a exclusão do hotel.', :method => :delete%> | 
+							<%=link_to image_tag("icons/excluir.png"), h, :confirm => 'Confirme a exclusão do hotel.', :method => :delete%> 
 						<%end%>
-						<b><%=h.nome%></b> | Tel: <%=h.telefone%> | Endereço: <%=link_to h.site, h.site, :target => "_blank"%> 
+						<b><%=h.nome%></b> | Tel: <%=h.telefone%> | End.: <%=link_to h.site, h.site, :target => "_blank"%> 
 					</p>
                 </div>
 				<%end%>

@@ -34,14 +34,14 @@
 
 	#Content #Boxcenter #Boxfoto p
 	{
-		font:Verdana, Helvetica, sans-serif;
+		font:Verdana, Geneva, sans-serif;
 		font-size:12px;
 		font-weight:normal;
 		color:#9e8357;
 	}
 		#Content #Boxcenter #Boxfoto b
 		{
-			font:Verdana, Helvetica, sans-serif;
+			font:Arial, Helvetica, sans-serif;
 			font-size:12px;
 			color:#9e8357;
 		}
@@ -72,13 +72,10 @@
 #Content #Boxcenter #Bottomboxfotos 
 {
 	display:block;
-	height:600pxs;
+	height:600px;
 	width:auto;
 	padding:10px 10px 10px 10px;
 	margin:auto;
-	background-image:url(../images/img_back_botbigfoto.jpg);
-	background-repeat:repeat-x;
-	
 }
 	#Content #Boxcenter #Bottomboxfotos #Boxlistafotos
 	{

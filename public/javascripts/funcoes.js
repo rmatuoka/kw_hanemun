@@ -12,6 +12,7 @@ function adiciona_carrinho(id)
             //alert(msg);
 		}
 	});
+	window.location="/carrinho";
 }
 
 function remove_carrinho(id)

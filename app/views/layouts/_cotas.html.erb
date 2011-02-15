@@ -9,7 +9,7 @@
 		<%@cart.each do |c|%>
 		<%q = Quote.find(c.quote_id)%>
 		<div class="Boxmeucarrinho">
-			<h1 class="Titulo6"><%=q.nome%></h1>
+			<h1 class="Titulo6"><%=truncate(q.nome, 7, "...")%></h1>
 			<h1 class="Titulo5"><%=number_to_currency(q.valor.to_s)%></h1>
 			<%=link_to image_tag("trans.gif", :class =>"botao_carrinho_pacote"), "javascript:remove_carrinho(#{q.id});"%>
 		</div>

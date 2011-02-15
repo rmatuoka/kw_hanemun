@@ -5,7 +5,7 @@
 }
 a, p, td, input, textarea, span, div ,h1
 {
-	font:Verdana, Helvetica, sans-serif;
+	font-family:Verdana, Geneva, sans-serif;
 	color:#5c5c5c;
 	font-style:normal;
 	font-size:12px;
@@ -61,7 +61,7 @@ body
 }
 #Content .Titulo
 {
-	font:Verdana, Helvetica, sans-serif;
+	font:Verdana, Geneva, sans-serif;
 	color:#5c5c5c;
 	font-size:15px; 
 	font-weight:bold;
@@ -69,7 +69,7 @@ body
 }
 #Content .Titulo2
 {
-	font-family:Verdana, Helvetica, sans-serif;
+	font-family:Verdana, Geneva, sans-serif;
 	font-size:14px;
 	color:#960062;
 }
@@ -123,7 +123,7 @@ body
 }
 	.Tit_edit h1
 	{
-		font-family:Verdana, Helvetica, sans-serif;
+		font-family:Verdana, Geneva, sans-serif;
 		color:#FFF;
 		padding:10px 0 0 10px ;
 		font-size:15px;
@@ -131,7 +131,7 @@ body
 	}
 .Arialtxt
 {
-	font-family:Verdana, Helvetica, sans-serif;
+	font-family:Verdana, Geneva, sans-serif;
 	font-size:15px;
 	text-align:center;	
 }
@@ -191,7 +191,7 @@ body
 								
 			#Content #Boxleft h1
 			{
-					font-family:Verdana, Helvetica, sans-serif;
+					font-family:Verdana, Geneva, sans-serif;
 						font-size:12px;
 						font-weight:normal;
 			}
@@ -208,7 +208,7 @@ body
 		}	
 			#Content #Boxleft #Boxfaltamdias
 			{
-				font:Verdana, Helvetica, sans-serif;
+				font:Verdana, Geneva, sans-serif;
 				color:#5c5c5c;
 				font-weight:bold;
 				text-align:center;
@@ -337,7 +337,7 @@ body
 						}
 								#Content #Boxcenter #Bottomboxc #Ultimasat
 								{
-									font:Verdana, Helvetica, sans-serif;
+									font:Verdana, Geneva, sans-serif;
 									color:#5c5c5c;
 									font-weight:bold;
 									text-align:left;
@@ -351,7 +351,7 @@ body
 								}
 									#Content #Boxcenter #Bottomboxc #BoxAtualiza
 									{
-										font:Verdana, Helvetica, sans-serif;
+										font:Verdana, Geneva, sans-serif;
 										color:#5c5c5c;
 										font-weight:bold;
 										text-align:left;
@@ -365,14 +365,14 @@ body
 									}
 										#Content #Boxcenter #Bottomboxc #BoxAtualiza h1
 										{
-											font:Verdana, Helvetica, sans-serif;
+											font:Verdana, Geneva, sans-serif;
 											color:#5c5c5c;
 											font-weight:bold;
 											text-align:justify;
 										}
 										#Content #Boxcenter #Bottomboxc #BoxAtualiza p
 										{
-											font:Verdana, Helvetica, sans-serif;
+											font:Verdana, Geneva, sans-serif;
 											color:#5c5c5c;
 											font-weight:normal;
 											text-align:justify;
@@ -387,7 +387,6 @@ body
 	width:596px;
 	height:43px;
 }
-
 .hide
 {
 	display:none;

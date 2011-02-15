@@ -4,19 +4,19 @@
 
 <div id="Boxcenter">
            <%=render :file => "/layouts/_top.html.erb"%>
-           <div id="Vazia"></div>
-            <div id="Bottomboxsaloes">
-            	<h1 class="Titlista">LISTA DE SALÕES</h1> 
+            <div id="Bottomboxcsaloes">
+            	<span class="Titlista"><%= image_tag("tit_listasaloes.png")%></span>
 				<%if current_user%>
 					<%=link_to "+ adicionar novo", new_hair_path%>
                 <%end%>
+
 				<%@hairs.each do |h|%>
 				<div id="Boxlista">
                     <p>
 						<%if current_user%>
-							<%=link_to "Excluir", h, :confirm => 'Confirme a exclusão do hotel.', :method => :delete%> | 
+							<%=link_to image_tag("icons/excluir.png"), h, :confirm => 'Confirme a exclusão do hotel.', :method => :delete%>
 						<%end%>
-						<b><%=h.nome%></b> | Tel: <%=h.telefone%> | Endereço: <%=link_to h.site, h.site, :target => "_blank"%> 
+						<b><%=h.nome%></b> | Tel: <%=h.telefone%> | End.: <%= h.site%> 
 					</p>
                 </div>
 				<%end%>

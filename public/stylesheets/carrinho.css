@@ -52,3 +52,24 @@
 	height:450px;
 	background-color:#fffce7;	
 }
+#Bottomboxmensagens
+{
+	background-image:url(../images/img_back_itemfoto.jpg);
+	background-repeat:repeat-x;
+}
+.Tabelaitem
+{
+	margin:auto;
+	
+}
+
+#Form
+{
+	margin:auto;
+	display:block;
+}
+
+#TabelaEmailNome
+{
+	margin:auto;
+}

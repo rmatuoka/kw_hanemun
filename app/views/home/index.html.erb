@@ -7,10 +7,12 @@
            
 			<div id="Midboxc">
 				<img src="images/tit_nossahistoria.png" width="540" height="31" /><br /><br />
+				<div style="margin:auto; width:535px;">
 				<%if current_user%>
 					<%=link_to image_tag("icons/editar.png") + "Editar Profile", edit_user_path(:current)%>
 				<%end%>
 				<%=@user.historia%>
+				</div>
 			</div>
 			<div id="Bottomboxc">
             	<img src="images/tit_deixesuamensagem.png"/><br /><br />

@@ -1,37 +1,33 @@
 @charset "utf-8";
 /* CSS Document */
-#Content #Boxcenter #Bottomboxsaloes
-{
-	width:600px;
-	height:450px;
-	margin:auto;
-	background-color:#fff;	
-}
-	#Content #Boxcenter #Bottomboxsaloes #Boxlista
+	#Content #Boxcenter #Bottomboxcsaloes
+	{
+		width:600px;
+		height:450px;
+		margin:auto;	
+	}	
+
+	
+	#Content #Boxcenter #Bottomboxcsaloes #Boxlista
 	{
 		background-image:url(../images/img_back_listahs.png);
 		background-repeat:no-repeat;
 		background-position:center top;
 		font:Verdana, Geneva, sans-serif;
 		color:#000;
-		font-weight:bold;
-		padding:15px 10px 10px 10px;
-		width:552px;
+		/*font-weight:bold;*/
+		padding:15px 20px 10px 20px;
+		width:532px;
 		height:15px;
 		margin:auto;
 		
 	}
+
 .Titlista
 {
-	font-family:Verdana, Helvetica, sans-serif;
+	display:block;
+	font-family:Verdana, Geneva, sans-serif;
 	font-size:14px;
 	color:#960062;
-	text-align:left;
-	margin:0px 0px 5px 10px
-}
-
-#Vazia
-{
-	width:auto;
-	height:80px;	
+	margin:auto auto 20px auto;
 }
