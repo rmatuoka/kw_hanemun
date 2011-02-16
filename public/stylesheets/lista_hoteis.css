@@ -1,9 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-p
-{
-	font-size:10px;
-}
 						#Content #Boxcenter #Bottomboxchoteis
 						{
 							width:600px;
@@ -18,10 +14,10 @@ p
 		font:Verdana, Geneva, sans-serif;
 		color:#000;
 		/*font-weight:bold;*/
-		padding:15px 20px 10px 20px;
+		padding:5px 20px 5px 20px;
 		width:532px;
-		height:15px;
-		margin:auto;
+		height:30px;
+		margin:2px auto;
 		
 	}
 .Titlista

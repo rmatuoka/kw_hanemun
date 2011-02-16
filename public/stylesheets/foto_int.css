@@ -72,7 +72,7 @@
 #Content #Boxcenter #Bottomboxfotos 
 {
 	display:block;
-	height:600px;
+	height:auto;
 	width:auto;
 	padding:10px 10px 10px 10px;
 	margin:auto;

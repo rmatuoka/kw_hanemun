@@ -11,19 +11,16 @@ class PaymentsController < ApplicationController
           transaction.status = notification.status
           transaction.save
           
-          corpo= "<b>Nome:</b>#{transaction.nome}<br />
-                  <b>Email:</b>#{transaction.email}<br />"
-          #se precisar os parametros são Email.deliver_padrao(corpo, "Assunto",email para   #enviar(destino), email para resposta)
-          Email.deliver_padrao(corpo ,"Compra Efetuada")
-
-          
+          if transaction.status.to_s.include? 'completed'
+            Email.deliver_enviar(transaction.email, "site@fasterm.com.br", "Teste do envio", "<b>Nome:</b>#{transaction.nome}")
+          end
           
           #SETA QUOTES COMO INDIPONIVEL
           carts = Cart.all(:conditions => ['session_id = ?', transaction.session_id])
           carts.each do |c|
             q = Quote.find(c.quote_id)
             q.indisponivel = true
-            q.save
+            #q.save
           end
         end
       end

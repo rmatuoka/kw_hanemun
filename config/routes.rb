@@ -20,7 +20,10 @@ ActionController::Routing::Routes.draw do |map|
   
   map.resources :carrinho, :singular => :carrinho_item, :new => {:transaction => :post}, :collection => {:adicionar => :get, :remover => :get, :finalizar => :get}, :member => {:excluir => :get}
   map.resources :hotels
-  map.resources :fotos, :collection => { :ajax => :get}
+  
+  map.resources :teste
+  
+  map.resources :fotos, :collection => { :ajax => :get, :remover =>:get}
   map.resources :payments, :collection => {:efetuado => :post}
   map.resources :lista, :singular => :lista_item
   map.resources :recepcao, :singular => :recepcao_local

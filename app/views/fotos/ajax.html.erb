@@ -2,5 +2,10 @@
 <%=image_tag @foto.image.url("medio"), :style => "margin:10px auto"%> 	
 </div>
 <div id="Box_texto">
- 	<h1><%=@foto.legenda%></h1>
+ 	<h1>
+		<%if current_user%>
+			<%=link_to image_tag("icons/excluir.png"), "javascript:void(0)", :onclick=>"remove_foto(#{@foto.id})"%> 
+		<%end%>
+		<%=@foto.legenda%>
+	</h1>
 </div>

@@ -7,7 +7,7 @@
             <div id="Bottomboxchoteis">
             	<span class="Titlista"><%= image_tag("tit_listahoteis.png")%></span>
 				<%if current_user%>
-					<%=link_to "+ adicionar novo", new_hotel_path%>
+					<%=link_to image_tag("icons/adicionar.png") + "adicionar foto", new_hotel_path%>
                 <%end%>
 
 				<%@hotels.each do |h|%>
@@ -16,7 +16,10 @@
 						<%if current_user%>
 							<%=link_to image_tag("icons/excluir.png"), h, :confirm => 'Confirme a exclusão do hotel.', :method => :delete%> 
 						<%end%>
-						<b><%=h.nome%></b> | Tel: <%=h.telefone%> | End.: <%=link_to h.site, h.site, :target => "_blank"%> 
+						<b><%=h.nome%></b> 
+					</p>
+					<p>
+					Tel: <%=h.telefone%> | End.: <%=link_to h.site, h.site, :target => "_blank"%> 				
 					</p>
                 </div>
 				<%end%>

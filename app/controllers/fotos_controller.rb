@@ -1,5 +1,6 @@
 class FotosController < ApplicationController
-  before_filter :autentica, :load_album, :load_box_package, :except => "ajax"
+  before_filter :autentica, :load_album, :load_box_package, :except => ["ajax", "remover"]
+  
   layout "blank", :except => "new"
   def show
     
@@ -29,4 +30,16 @@ class FotosController < ApplicationController
     @album = Album.find(params[:album_id])
   end
   
+  def remover
+    if !params[:id_foto].blank?
+      foto = Foto.first(:conditions =>['id = ?', params[:id_foto]])
+      
+      if foto
+        foto.destroy
+        @out = "AHU"
+      end
+    end
+  end
+    
+    
 end

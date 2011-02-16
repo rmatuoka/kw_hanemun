@@ -4,6 +4,9 @@
 
 <div id="Boxcenter">
     <%=render :file => "/layouts/_top.html.erb"%>
+	<%if current_user%>
+		<%=link_to image_tag("icons/adicionar.png") + "adicionar novo album", new_album_path%>
+	<%end%>
     <div id="Midboxfoto">
 		<%= image_tag("tit_fotos.png", :style =>"margin:0 0 10px 0;")%>
 	</div>
@@ -32,9 +35,6 @@
             </p>
             </div>
         </div>
-		<%end%>
-		<%if current_user%>
-			<%=link_to image_tag("icons/adicionar.png") + "adicionar novo album", new_album_path%>
 		<%end%>
         <div id="Box_paginas">
         	<div id="Pagina_top"><img src="images/tit_paginas.png" style="margin:5px auto;"></div>

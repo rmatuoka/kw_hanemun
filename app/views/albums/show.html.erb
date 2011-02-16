@@ -19,6 +19,22 @@
 		});
 	}
 	
+	function remove_foto(id_remover)
+	{
+		$.ajax({
+			type:     "GET",
+			dataType: "html",
+			url:      "/fotos/remover",
+			data:     "id_foto="+ id_remover,
+			success: function(msg){
+				//alert(msg);
+				//$("#Boxlistafotos").html("");
+				window.location.reload();
+			}
+		});
+
+	}
+	
 	jQuery(document).ready(function() {
 	    jQuery('#mycarousel').jcarousel({
 	        // Configuration goes here
@@ -28,24 +44,24 @@
 <%end%>
 <div id="Boxcenter">
     <%=render :file => "/layouts/_top.html.erb"%>
+	<%if current_user%>
+  	<%=link_to image_tag("icons/adicionar.png") + "adicionar foto", new_album_foto_path(@album)%>
+    <%end%>
+	<%if !@fotos.blank?%>
     <div id="Midboxfoto">
-	    <div class="Tit_edit"><h1>Nossos Momentos</h1></div>
+	    <div class="Tit_edit"><h1><%=@album.titulo%></h1></div>
     </div>
-		  <%if !@fotos.blank?%>
           <div id="Bottomboxfotos">
             <div id="Boxlistafotos">
              
             </div>
             <div id="Back_jquery">
-				<%if current_user%>
-			  	<%=link_to image_tag("icons/adicionar.png") + "adicionar foto", new_album_foto_path(@album)%>
-			    <%end%>
       			<div id="Box_jquery">
                         <div id="Img_jquery">
 							<ul id="mycarousel" class="jcarousel-skin-tango">
 							<%
-							@fotos.each do |f|
 							counter = 1
+							@fotos.each do |f|
 							%>
 								<li class="jcarousel-item-<%=counter%>"><a href="javascript:void(0);" onclick="carrega_foto(<%=f.id%>)"><%=image_tag(f.image.url("thumb"))%></a></li>
 							<%

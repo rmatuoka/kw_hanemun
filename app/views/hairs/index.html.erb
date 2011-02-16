@@ -7,16 +7,18 @@
             <div id="Bottomboxcsaloes">
             	<span class="Titlista"><%= image_tag("tit_listasaloes.png")%></span>
 				<%if current_user%>
-					<%=link_to "+ adicionar novo", new_hair_path%>
+					<%=link_to image_tag("icons/adicionar.png") + "adicionar foto", new_hair_path%>
                 <%end%>
-
 				<%@hairs.each do |h|%>
 				<div id="Boxlista">
                     <p>
 						<%if current_user%>
 							<%=link_to image_tag("icons/excluir.png"), h, :confirm => 'Confirme a exclusão do hotel.', :method => :delete%>
 						<%end%>
-						<b><%=h.nome%></b> | Tel: <%=h.telefone%> | End.: <%= h.site%> 
+						<b><%=h.nome%></b> 
+					</p>
+					<p>
+						Tel: <%=h.telefone%> | End.: <%= h.site%> 
 					</p>
                 </div>
 				<%end%>

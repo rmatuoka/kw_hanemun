@@ -261,10 +261,11 @@ body
 						background-repeat:no-repeat;
 						background-position:center bottom;
 						background-color:#ffedd2;
-						padding:16px 0 0 0;
+						padding:16px 0 0 38px;
 						margin:auto;
-						width:170px;
-						height:19px;	
+						width:132px;
+						height:19px;
+						display:block;	
 					}
 						#Content #Boxright #Boxcarrinho
 						{
@@ -391,4 +392,10 @@ body
 {
 	display:none;
 }
+.botao_carrinho_pacote
+{
+	height:20px;
+	width:35px;
+	float:right;
+	display:block;
 }

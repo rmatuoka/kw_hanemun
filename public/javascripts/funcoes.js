@@ -29,6 +29,7 @@ function remove_carrinho(id)
             //alert(msg);
 		}
 	});
+	window.location="/carrinho";
 }
 
 function mostra_cota(x)
