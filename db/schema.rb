@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110128145634) do
+ActiveRecord::Schema.define(:version => 20110217194702) do
 
   create_table "albums", :force => true do |t|
     t.string   "titulo"
@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(:version => 20110128145634) do
     t.integer  "quote_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "finalizado", :default => false
+    t.integer  "finalizado", :limit => 1, :default => 0
   end
 
   create_table "fotos", :force => true do |t|
@@ -74,14 +74,25 @@ ActiveRecord::Schema.define(:version => 20110128145634) do
     t.integer  "user_id"
   end
 
+  create_table "presencas", :force => true do |t|
+    t.string   "convidado"
+    t.integer  "adulto"
+    t.integer  "crianca"
+    t.string   "email"
+    t.string   "telefone"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "quotes", :force => true do |t|
     t.integer  "package_id"
     t.string   "nome"
     t.string   "descricao"
-    t.decimal  "valor",        :precision => 10, :scale => 2
+    t.decimal  "valor",                     :precision => 10, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.boolean  "indisponivel"
+    t.integer  "indisponivel", :limit => 1,                                :default => 0
   end
 
   create_table "scrapbooks", :force => true do |t|

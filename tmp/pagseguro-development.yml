@@ -1,4 +1,16 @@
 --- 
+"11": !map:HashWithIndifferentAccess 
+  tipo: CP
+  item_frete_1: "0"
+  ref_transacao: "11"
+  item_valor_1: "9900"
+  commit: Efetuar pagamento!
+  moeda: BRL
+  item_quant_1: "1"
+  email_cobranca: fabiano@pprint.com.br
+  item_peso_1: "0"
+  item_id_1: "1"
+  item_descr_1: "Passeio rom\xE2ntico de barco"
 "55": !map:HashWithIndifferentAccess 
   tipo: CP
   item_frete_1: "0"
@@ -40,19 +52,19 @@
   item_frete_1: "0"
   ref_transacao: "12"
   item_valor_1: "9900"
-  item_frete_2: "0"
   commit: Efetuar pagamento!
   moeda: BRL
   item_quant_1: "1"
-  item_valor_2: "20000"
   email_cobranca: fabiano@pprint.com.br
-  item_quant_2: "1"
   item_peso_1: "0"
   item_id_1: "1"
-  item_peso_2: "0"
-  item_id_2: "2"
   item_descr_1: "Passeio rom\xE2ntico de barco"
-  item_descr_2: Passeio de moto
+"7": !map:HashWithIndifferentAccess 
+  tipo: CP
+  ref_transacao: "7"
+  commit: Efetuar pagamento!
+  moeda: BRL
+  email_cobranca: fabiano@pprint.com.br
 "35": !map:HashWithIndifferentAccess 
   tipo: CP
   item_frete_1: "0"
@@ -70,19 +82,13 @@
   item_frete_1: "0"
   ref_transacao: "13"
   item_valor_1: "9900"
-  item_frete_2: "0"
   commit: Efetuar pagamento!
   moeda: BRL
   item_quant_1: "1"
-  item_valor_2: "20000"
   email_cobranca: fabiano@pprint.com.br
-  item_quant_2: "1"
   item_peso_1: "0"
   item_id_1: "1"
-  item_peso_2: "0"
-  item_id_2: "2"
   item_descr_1: "Passeio rom\xE2ntico de barco"
-  item_descr_2: Passeio de moto
 "14": !map:HashWithIndifferentAccess 
   tipo: CP
   item_frete_1: "0"

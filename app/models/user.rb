@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :hotels
   has_many :hairs
   has_many :packages
+  has_many :presencas
   
   
   has_attached_file :avatar, :styles => { :home => "140x209>"},

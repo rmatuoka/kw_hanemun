@@ -12,7 +12,12 @@ class PaymentsController < ApplicationController
           transaction.save
           
           if transaction.status.to_s.include? 'completed'
-            Email.deliver_enviar(transaction.email, "site@fasterm.com.br", "Teste do envio", "<b>Nome:</b>#{transaction.nome}")
+            corpo = "
+            <b>Nome:</b>#{transaction.nome}<br />
+            <b>E-mail: </b>#{transaction.email}<br />
+            "
+            Email.deliver_agradecimento(transaction.email)
+            Email.deliver_pedido(@user.email,corpo)
           end
           
           #SETA QUOTES COMO INDIPONIVEL

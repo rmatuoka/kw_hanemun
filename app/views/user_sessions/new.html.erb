@@ -1,15 +1,17 @@
-LOGIN
+<h1>LOGIN</h1>
 
 <% form_for @user_session do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.label :username %><br />
+    <%= f.label :Usuário %><br />
     <%= f.text_field :username %>
   </p>
+  <br />
   <p>
-    <%= f.label :password %><br />
+    <%= f.label :Senha %><br />
     <%= f.password_field :password %>
   </p>
+  <br />
   <p><%= f.submit "Logar" %></p>
 <% end %>
 

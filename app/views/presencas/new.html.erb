@@ -1,0 +1,35 @@
+<%content_for :head do%>
+	<%=stylesheet_link_tag "presenca"%>
+<%end%>
+		<div id="Boxcenter">
+		            <%=render :file => "/layouts/_top.html.erb"%>    
+
+					<div id="Midboxc">
+						<!-- Imagem do Confirmar Presenças-->
+					</div>
+					<div id="BottomboxcPresenca">	
+						<br /><br />
+						<% form_for (@presenca) do |f| %>
+							<p style="height:auto; margin:0 0 0 0;font:Verdana, Geneva, sans-serif;color:#ac4280;">
+								<%= f.label :Convidado %><br />
+								<%= f.text_field :convidado, :value => "Nome Completo", :style => "width:250px;height:21px; border:#ffdaf7 solid 1px; padding:0 0 0 3px", :onblur=> "if(this.value == '') { this.value='Nome Completo'}", :onfocus=> "if (this.value == 'Nome Completo') {this.value=''}"%>
+							<br />
+								<%= f.label :Adultos %><br />
+								<%= f.select :adulto,['0','1','2','3','4','5','6','7','8','9','10']%>
+							<br />
+								<%= f.label :Crianças %><br />
+								<%= f.select :crianca,['0','1','2','3','4','5','6','7','8','9','10']%>
+							<br />
+								<%= f.label "E-mail" %><br />
+								<%= f.text_field :email, :value => "E-mail", :style => "width:250px;height:21px; border:#ffdaf7 solid 1px; padding:0 0 0 3px", :onblur=> "if(this.value == '') { this.value='E-mail'}", :onfocus=> "if (this.value == 'E-mail') {this.value=''}"%>
+							<br />
+								<%= f.label :Telefone %><br />
+								<%= f.text_field :telefone, :value => "Telefone", :style => "width:250px;height:21px; border:#ffdaf7 solid 1px; padding:0 0 0 3px", :onblur=> "if(this.value == '') { this.value='Telefone'}", :onfocus=> "if (this.value == 'Telefone') {this.value=''}"%>
+							<br />
+							<br />	  
+						  <p style="text-align:center;">
+							<%= f.submit "Confirmar Presença"%>
+						</p>
+						<% end %>
+		            </div>		
+		</div>

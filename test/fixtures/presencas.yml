@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  convidado: MyString
+  adulto: 1
+  crianca: 1
+  email: MyString
+  telefone: MyString
+
+two:
+  convidado: MyString
+  adulto: 1
+  crianca: 1
+  email: MyString
+  telefone: MyString

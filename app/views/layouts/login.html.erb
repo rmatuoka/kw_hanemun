@@ -3,9 +3,23 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>Hanemon</title>
+<%=stylesheet_link_tag "estilo"%>
+<%=stylesheet_link_tag "login"%>
 <%= include_tiny_mce_if_needed %>
 </head>
 <body>
-<%=yield%>
+	<div id="General">
+	    <div id="Content">
+			<div id="Boxcenter">
+			            <%=render :file => "/layouts/_top.html.erb"%>
+						<div id="Midboxc">
+						</div>
+						<div id="BottomboxcLogin">
+						<%=yield%>
+						</div>
+			</div>
+		</div>
+	</div>
+	<div id="Footer"><%=link_to image_tag("img_logokorewa.png", :align=>"right", :style=>"margin:3px 30px auto"), "http://www.korewa.com.br"%></div>
 </body>
 </html>

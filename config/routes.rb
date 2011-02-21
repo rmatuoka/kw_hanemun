@@ -22,6 +22,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :hotels
   
   map.resources :teste
+  map.resources :presencas
   
   map.resources :fotos, :collection => { :ajax => :get, :remover =>:get}
   map.resources :payments, :collection => {:efetuado => :post}
