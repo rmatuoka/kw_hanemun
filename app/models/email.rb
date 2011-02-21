@@ -15,7 +15,7 @@ class Email < ActionMailer::Base
 
   def agradecimento(para)
     recipients para
-    from "Email de Resposta<silva_v_bruno@hotmail.com>"#Email configurado no SMTP
+    from "Email de Resposta<resposta@vanessaefabiano.com.br>"#Email configurado no SMTP
     subject "Agradecimento"
     body :agradecimento => "Obrigado!"
   end
@@ -23,7 +23,7 @@ class Email < ActionMailer::Base
 
   def pedido(para,mensagem) #E-mail enviado para os noivos
     recipients para
-    from "Email de Resposta<silva_v_bruno@hotmail.com>"#Email configurado no SMTP
+    from "Email de Resposta<resposta@vanessaefabiano.com.br>"#Email configurado no SMTP
     subject "Presentes"
     body :pedido => mensagem
   end
@@ -31,7 +31,7 @@ class Email < ActionMailer::Base
   
   def confpresenca(para,mensagem)
     recipients para
-    from "Email de Resposta<silva_v_bruno@hotmail.com>"#Email configurado no SMTP
+    from "Email de Resposta<resposta@vanessaefabiano.com.br>"#Email configurado no SMTP
     subject "Confirmação de Presença"
     body :confpresenca => mensagem
   end
@@ -39,7 +39,7 @@ class Email < ActionMailer::Base
   
   def presenca(para,mensagem) #E-mail enviado para os noivos
     recipients para
-    from "Email de Resposta<silva_v_bruno@hotmail.com>"#Email configurado no SMTP
+    from "Email de Resposta<resposta@vanessaefabiano.com.br>"#Email configurado no SMTP
     subject "Presença Confirmada"
     body :confirmacao => mensagem
   end
