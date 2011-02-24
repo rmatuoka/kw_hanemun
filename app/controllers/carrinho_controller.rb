@@ -1,6 +1,6 @@
 class CarrinhoController < ApplicationController
   before_filter :autentica, :load_box_package
-  layout "application", :except => [:adicionar, :remover]
+  layout "application", :except => [:remover]#:adicionar, 
   
   def index
     @total = 0
@@ -19,15 +19,15 @@ class CarrinhoController < ApplicationController
   end
   
   def adicionar
-    if !params[:quote_id].blank?
+    if !params[:id].blank?
       #verifica se existe o item no carrinho
-      carts = Cart.first(:conditions => ['session_id = ? AND quote_id = ? AND finalizado = 0', request.session_options[:id], params[:quote_id]] )
+      carts = Cart.first(:conditions => ['session_id = ? AND quote_id = ? AND finalizado = 0', request.session_options[:id], params[:id]] )
       
       if !carts
         #ADICIONA ITEM NO BANCO
         item = Cart.new
         item.session_id = request.session_options[:id]
-        item.quote_id = params[:quote_id]
+        item.quote_id = params[:id]
         
         if !item.save
           #erro
@@ -35,7 +35,8 @@ class CarrinhoController < ApplicationController
         end
       end
     end    
-    gera_carrinho
+   # gera_carrinho
+   redirect_to carrinho_path
   end
   
   def remover

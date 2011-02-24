@@ -37,7 +37,7 @@
                           <tr>
                             <td width="336"><p class="Textoitem1"><%=q.nome%></p></td>
                             <td width="119"><p class="Textoitem1"> <%= number_to_currency(q.valor)%></p></td>
-                            <td width="59"><%=link_to image_tag("btn_comprar.png", :style =>"margin:3px auto"), "javascript:adiciona_carrinho(#{q.id});"%></td>
+                            <td width="59"><%=link_to image_tag("btn_comprar.png", :style =>"margin:3px auto"), adicionar_carrinho_item_path(q)%></td>
                           </tr>
                           <tr>
                             <td colspan=3><p class="Textoitem2"><%=q.descricao%></p></td>
