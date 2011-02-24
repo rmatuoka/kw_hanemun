@@ -8,11 +8,10 @@ function adiciona_carrinho(id)
 		success: function(msg){
 			//alert(msg);
 			$("#ajaxCarrinho").html(msg);
-			//$("#formpagseguro").submit();
-            //alert(msg);
+			window.location="/carrinho";
 		}
 	});
-	window.location="/carrinho";
+	
 }
 
 function remove_carrinho(id)
