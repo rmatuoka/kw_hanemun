@@ -1,5 +1,5 @@
 class CarrinhoController < ApplicationController
-  before_filter :autentica, :load_box_package
+  before_filter :autentica, :load_box_package 
   layout "application", :except => [:remover]#:adicionar, 
   
   def index

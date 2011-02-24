@@ -30,7 +30,7 @@
             <div id="Titulo_compra"><h1><%=p.nome%></h1></div>
                 <div id="Lista_compra<%=p.id%>" class="hide">
 					<%
-					p.quotes.all(:conditions => ['indisponivel = 0']).each do |q|
+					p.quotes.all(:conditions => ['indisponivel = 0']).each do |q| 
 					%>
                     <div id="Item_compra">
                         <table width="540" class="Tabelaitem">

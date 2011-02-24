@@ -30,7 +30,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :recepcao, :singular => :recepcao_local
   
   
-  map.login "login", :controller => "user_sessions", :action => "new"
+  map.login "login", :controller => "user_sessions", :action => "new" 
   map.logout "logout", :controller => "user_sessions", :action => "destroy"
   
   map.root :controller => "home"
